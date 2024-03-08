@@ -1,0 +1,59 @@
+//=================================//
+//          STICKY SIDEBAR         
+//=================================//
+
+.wrap .sidenav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: #242526;
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    ul {
+        li {
+            list-style: none;
+            padding: 16px;
+        }
+
+        a {
+        text-decoration: none;
+        color: #fff;
+
+            i {
+                margin-right: 5px;
+            }
+       }
+    }
+
+    //=== SOCIALS ===//
+    .socials {
+        font-size: 25px;
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translate(-50%);
+        word-spacing: 5px;
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+//======== PAGE CONTENT SIZING ========//
+.wrap .page-content {
+    width: 80vw;
+    margin-left: 20vw;
+}

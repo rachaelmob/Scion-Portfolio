@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", serif, sans-serif;
+}
+
+section {
+  height: 100vh;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.wrap .sidenav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: #242526;
+}
+.wrap .sidenav h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.wrap .sidenav ul li {
+  list-style: none;
+  padding: 16px;
+}
+.wrap .sidenav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.wrap .sidenav ul a i {
+  margin-right: 5px;
+}
+.wrap .sidenav .socials {
+  font-size: 25px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%);
+  word-spacing: 5px;
+}
+.wrap .sidenav .socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrap .page-content {
+  width: 80vw;
+  margin-left: 20vw;
+}
+
+.card-wrap {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.card-wrap .card {
+  width: 280px;
+  height: 360px;
+  position: relative;
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
