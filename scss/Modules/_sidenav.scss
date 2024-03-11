@@ -6,29 +6,70 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 20vw;
-    height: 100vh;
     background-color: #242526;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    h1 {
+    a {
+        text-decoration: none;
         color: #fff;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 40px;
     }
 
+    .nav-title {
+        margin-top: 2rem;
+        background-color: black;
+        
+        h1 {
+            font-size: 3rem;
+            margin: 0.2rem 0;
+            text-transform: uppercase;
+        }
+
+    }
+
+
+
     ul {
+        display: flex;
+        flex-direction: row;
+
         li {
             list-style: none;
             padding: 16px;
         }
 
         a {
-        text-decoration: none;
-        color: #fff;
+        filter: grayscale(100%) opacity(0.7);
+        transition: var(--transition-speed);
+
+        &:hover {
+            filter: grayscale(0%) opacity(1);
+            background: black;
+        }
 
             i {
                 margin-right: 5px;
+            }
+
+            .fa-address-card {
+                color: #6649b8;
+            }
+
+            .fa-square-pied-piper {
+                color: pink;
+            }
+
+            .fa-code {
+                color: lightblue;
+            }
+
+            .fa-graduation-cap {
+                color: yellow;
+            }
+
+            .fa-pager {
+                color: lightsalmon;
             }
        }
     }
@@ -49,11 +90,78 @@
     }
 }
 
+//=================================//
+//       RESPONSIVE SIDE NAV       
+//=================================//
 
+//======== X-SMALL 1 TO 567PX ========//
+@include mq(x-small){
+    .wrap .sidenav {
+        width: 100vw;
+        height: 5rem;
+    }
 
+    .nav-title {
+        display: none;
+    }
 
-//======== PAGE CONTENT SIZING ========//
-.wrap .page-content {
-    width: 80vw;
-    margin-left: 20vw;
+    .nav-text {
+        display: none;
+    }
 }
+
+
+@include mq(small) {
+    .wrap .sidenav {
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .nav-title {
+        display: none;
+    }
+
+    .nav-text {
+        // display: none;
+    }
+}
+
+
+//======== MEDIUM 768PX ========//
+@include mq(medium) {
+    .wrap .sidenav {
+        width: 20vw;
+        height: 100vh;
+
+        ul {
+            flex-direction: column;
+        }
+    }
+}
+
+//======== LARGE 992PX ========//
+@include mq(large) {
+    .wrap .sidenav {
+        width: 20vw;
+        height: 100vh;
+
+        ul {
+            flex-direction: column;
+        }
+    }
+}
+
+//======== X-LARGE 1200PX ========//
+@include mq(x-large) {
+    .wrap .sidenav {
+        width: 20vw;
+        height: 100vh;
+        
+        ul {
+            flex-direction: column;
+        }
+    }
+
+}
+
+

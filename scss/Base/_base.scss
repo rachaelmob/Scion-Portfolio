@@ -3,19 +3,41 @@
 //=================================//
 
 * {
+    font-size: 16px;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
 body {
     font-family: "Quicksand", serif, sans-serif;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #1e1e24;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #6649b8;
+    }
 }
+
 
 section {
     height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
 }
+
+//======== PAGE CONTENT SIZING ========//
+.wrap .page-content {
+    width: 80vw;
+    margin-left: 20vw;
+}
+
+
