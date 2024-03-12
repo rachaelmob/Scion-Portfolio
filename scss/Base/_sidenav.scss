@@ -3,13 +3,13 @@
 //=================================//
 
 .wrap .sidenav {
-    position: fixed;
     left: 0;
     top: 0;
-    background-color: #242526;
+    position: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #242526;
 
     a {
         text-decoration: none;
@@ -90,6 +90,9 @@
     }
 }
 
+// .wrap section {
+//     height: 100vh auto;
+// }
 
 
 
@@ -131,7 +134,7 @@
     }
 }
 
-// SMALL
+//======== SMALL 567PX ========//
 
 @include mq(small) {
     .wrap .sidenav {
@@ -171,6 +174,7 @@
     .wrap .sidenav {
         width: 20vw;
         height: 100vh;
+        opacity: 0.8;
 
         ul {
             flex-direction: column;
@@ -195,6 +199,7 @@
     .wrap .sidenav {
         width: 20vw;
         height: 100vh;
+        opacity: 0.8;
 
         ul {
             flex-direction: column;
@@ -220,6 +225,7 @@
     .wrap .sidenav {
         width: 20vw;
         height: 100vh;
+        opacity: 0.8;
         
         ul {
             flex-direction: column;

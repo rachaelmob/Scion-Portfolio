@@ -8,6 +8,10 @@
 body {
   font-family: "Quicksand", serif, sans-serif;
   overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), purple), url("../img/sunset-mountain-rok-romih.jpg");
 }
 body::-webkit-scrollbar {
   width: 0.2rem;
@@ -20,13 +24,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wrap .sidenav {
-  position: fixed;
   left: 0;
   top: 0;
-  background-color: #242526;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #242526;
 }
 .wrap .sidenav a {
   text-decoration: none;
@@ -141,6 +145,7 @@ body::-webkit-scrollbar-thumb {
   .wrap .sidenav {
     width: 20vw;
     height: 100vh;
+    opacity: 0.8;
   }
   .wrap .sidenav ul {
     flex-direction: column;
@@ -159,6 +164,7 @@ body::-webkit-scrollbar-thumb {
   .wrap .sidenav {
     width: 20vw;
     height: 100vh;
+    opacity: 0.8;
   }
   .wrap .sidenav ul {
     flex-direction: column;
@@ -177,6 +183,7 @@ body::-webkit-scrollbar-thumb {
   .wrap .sidenav {
     width: 20vw;
     height: 100vh;
+    opacity: 0.8;
   }
   .wrap .sidenav ul {
     flex-direction: column;
@@ -192,7 +199,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 #my-portfolio {
-  height: 200vh;
+  height: auto;
   margin-bottom: 100px;
 }
 #my-portfolio .card-wrap {
@@ -234,6 +241,65 @@ body::-webkit-scrollbar-thumb {
   padding: 8px 16px;
   border-radius: 5px;
   background-color: purple;
+}
+
+#contact-me {
+  width: 100%;
+  color: #fff;
+  height: auto;
+  padding-bottom: 20px;
+}
+#contact-me .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-me .form-container form {
+  width: 90%;
+  max-width: 600px;
+}
+#contact-me .form-container form .input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+#contact-me .form-container form input, #contact-me .form-container form textarea {
+  outline: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #fff;
+  background: transparent;
+}
+#contact-me .form-container form label {
+  cursor: text;
+  height: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+}
+#contact-me .form-container form input:focus ~ label,
+#contact-me .form-container form input:valid ~ label,
+#contact-me .form-container form textarea:focus ~ label,
+#contact-me .form-container form textarea:valid ~ label {
+  top: -35px;
+  font-size: 14px;
+}
+#contact-me .form-container form input:hover, #contact-me .form-container form input:focus,
+#contact-me .form-container form textarea:hover, #contact-me .form-container form textarea:focus,
+#contact-me .form-container form button:hover, #contact-me .form-container form button:focus {
+  box-shadow: 0px 0px 5px #fff;
+}
+#contact-me .form-container form button {
+  width: 100%;
+  color: #fff;
+  outline: none;
+  padding: 10px 0;
+  cursor: pointer;
+  border: 1px solid #fff;
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
