@@ -9,7 +9,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #242526;
+    background: transparent;
+    // background-color: rgba($color: #fff, $alpha: 0.1);
+    // border-radius: 80px;
+
+
 
     a {
         text-decoration: none;
@@ -18,7 +22,7 @@
 
     .nav-title {
         margin-top: 2rem;
-        background-color: black;
+        // background-color: black;
         
         h1 {
             font-size: 3rem;
@@ -45,7 +49,11 @@
 
         &:hover {
             filter: grayscale(0%) opacity(1);
-            background: black;
+            // background: black;
+            border: 1px solid #fff;
+            box-shadow: 0px 0px 5px #fff; 
+            padding: 10px;
+            border-radius: 20px;
         }
 
             i {
@@ -53,7 +61,7 @@
             }
 
             .fa-address-card {
-                color: #6649b8;
+                color: lightblue;
             }
 
             .fa-square-pied-piper {
@@ -65,11 +73,11 @@
             }
 
             .fa-graduation-cap {
-                color: yellow;
+                color: pink;
             }
 
             .fa-pager {
-                color: lightsalmon;
+                color: lightblue;
             }
        }
     }

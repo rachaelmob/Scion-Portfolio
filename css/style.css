@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #242526;
+  background: transparent;
 }
 .wrap .sidenav a {
   text-decoration: none;
@@ -38,7 +38,6 @@ body::-webkit-scrollbar-thumb {
 }
 .wrap .sidenav .nav-title {
   margin-top: 2rem;
-  background-color: black;
 }
 .wrap .sidenav .nav-title h1 {
   font-size: 3rem;
@@ -59,13 +58,16 @@ body::-webkit-scrollbar-thumb {
 }
 .wrap .sidenav ul a:hover {
   filter: grayscale(0%) opacity(1);
-  background: black;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px #fff;
+  padding: 10px;
+  border-radius: 20px;
 }
 .wrap .sidenav ul a i {
   margin-right: 5px;
 }
 .wrap .sidenav ul a .fa-address-card {
-  color: #6649b8;
+  color: lightblue;
 }
 .wrap .sidenav ul a .fa-square-pied-piper {
   color: pink;
@@ -74,10 +76,10 @@ body::-webkit-scrollbar-thumb {
   color: lightblue;
 }
 .wrap .sidenav ul a .fa-graduation-cap {
-  color: yellow;
+  color: pink;
 }
 .wrap .sidenav ul a .fa-pager {
-  color: lightsalmon;
+  color: lightblue;
 }
 .wrap .sidenav .socials {
   font-size: 25px;
