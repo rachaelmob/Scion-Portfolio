@@ -23,12 +23,6 @@ body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 
-#banner {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(125, 94, 216, 0.7)), url(../img/blue-mountain-aron-visuals.jpg);
-}
-
 .wrap .sidenav {
   left: 0;
   top: 0;
@@ -101,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wrap section {
-  margin-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 @media (min-width: 1px) and (max-width: 575px) {
@@ -121,10 +115,11 @@ body::-webkit-scrollbar-thumb {
     display: none;
   }
   .wrap .page-content {
-    width: 90vw;
+    width: 100vw;
     margin-left: 0;
   }
   .wrap section {
+    width: 100vw;
     height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
@@ -144,11 +139,12 @@ body::-webkit-scrollbar-thumb {
     display: none;
   }
   .wrap .page-content {
-    width: 90vw;
+    width: 100vw;
     margin-left: 0;
   }
   .wrap section {
     height: 100vh;
+    width: 100vw;
     padding-left: 30px;
     padding-top: 10px;
   }
@@ -210,9 +206,24 @@ body::-webkit-scrollbar-thumb {
     padding-top: 10px;
   }
 }
+#banner {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(128, 0, 128, 0.7)), url(../img/Horizon-roberto-nickson.jpg);
+}
+#banner .banner-text {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+#banner .banner-text h1 {
+  font-size: 72px;
+  letter-spacing: 0.2rem;
+}
+
 #my-portfolio {
   height: auto;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 #my-portfolio .card-wrap {
   display: flex;
@@ -259,6 +270,10 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   color: #fff;
   height: auto;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+}
+#contact-me h1 {
   padding-bottom: 20px;
 }
 #contact-me .form-container {
