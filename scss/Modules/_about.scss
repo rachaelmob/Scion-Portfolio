@@ -1,0 +1,83 @@
+//=================================//
+//            ABOUT ME         
+//=================================//
+
+#about-me {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 25px;
+
+
+        .about-content {
+            width: 1280px;
+            max-width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-around;
+
+
+            img {
+                height: auto;
+                width: 300px;
+                max-width: 100%;
+                border-radius: 20%;
+                filter: grayscale(100%);
+                filter: hue-rotate(10deg);
+                transition: transform 0.5s ease ;
+
+                    &:hover {
+                        transform: translateY(50px);
+                    }
+            }
+
+
+            .about-text {
+                width: 350px;
+                max-width: 100%;
+                padding: 0 10px;
+
+                h1 {
+                    font-size: 85px;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                }
+
+                h5 {
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                    margin-bottom: 25px;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 25px;
+                    letter-spacing: 1px;
+                    margin-bottom: 35px;
+                }
+
+                .cv-btn {
+                    color: #fff;
+                    font-size: 17px;
+                    font-weight: bold;
+                    padding: 10px 30px;
+                    text-decoration: none;
+                    border-radius: 30px;
+                    border: 2px solid white;
+                    background-color: transparent;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        background-color: transparent;
+                        box-shadow: 0px 0px 5px #fff;
+                    }
+                }
+            }
+        }
+
+
+}

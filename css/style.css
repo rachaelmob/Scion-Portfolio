@@ -6,7 +6,8 @@
 }
 
 body {
-  font-family: "Quicksand", serif, sans-serif;
+  font-family: "Quicksand", sans-serif, serif;
+  color: #fff;
   overflow-x: hidden;
   background-size: cover;
   background-position: center;
@@ -21,6 +22,10 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
+}
+
+#about-me, section {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .wrap .sidenav {
@@ -38,9 +43,10 @@ body::-webkit-scrollbar-thumb {
 }
 .wrap .sidenav .nav-title {
   margin-top: 2rem;
+  border-bottom: 1px solid white;
 }
 .wrap .sidenav .nav-title h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 0.2rem 0;
   text-transform: uppercase;
 }
@@ -221,6 +227,72 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.2rem;
 }
 
+#about-me {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 25px;
+}
+#about-me .about-content {
+  width: 1280px;
+  max-width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+#about-me .about-content img {
+  height: auto;
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20%;
+  filter: grayscale(100%);
+  filter: hue-rotate(10deg);
+  transition: transform 0.5s ease;
+}
+#about-me .about-content img:hover {
+  transform: translateY(50px);
+}
+#about-me .about-content .about-text {
+  width: 350px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+#about-me .about-content .about-text h1 {
+  font-size: 85px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+#about-me .about-content .about-text h5 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+#about-me .about-content .about-text p {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+#about-me .about-content .about-text .cv-btn {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+}
+#about-me .about-content .about-text .cv-btn:hover {
+  transform: scale(1.2);
+  background-color: transparent;
+  box-shadow: 0px 0px 5px #fff;
+}
+
 #my-portfolio {
   height: auto;
   padding-bottom: 100px;
@@ -233,6 +305,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 100px;
 }
 #my-portfolio .card-wrap .card {
+  color: #000;
   width: 15rem;
   background-color: #f4f4f4;
   border-radius: 10px;
