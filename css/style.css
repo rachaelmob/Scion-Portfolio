@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Quicksand", sans-serif, serif;
+  font-family: "Quicksand", sans-serif, Arial, serif;
   color: #fff;
   overflow-x: hidden;
   background-size: cover;
@@ -23,8 +23,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
-
-#about-me, section {
+body #about-me, body section {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -268,8 +267,10 @@ body::-webkit-scrollbar-thumb {
 #about-me .about-content .about-text h5 {
   font-size: 25px;
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
   text-transform: capitalize;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 #about-me .about-content .about-text p {
   font-size: 15px;
@@ -288,11 +289,27 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 #about-me .about-content .about-text .cv-btn:hover {
+  cursor: pointer;
   transform: scale(1.2);
-  background-color: transparent;
   box-shadow: 0px 0px 5px #fff;
 }
 
+@media screen and (max-width: 991px) {
+  #about-me {
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #about-me .about-content img {
+    margin-bottom: 35px;
+  }
+  #about-me .about-text h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+}
 #my-portfolio {
   height: auto;
   padding-bottom: 100px;
@@ -339,6 +356,77 @@ body::-webkit-scrollbar-thumb {
   background-color: purple;
 }
 
+#scs-scheme {
+  height: auto;
+  padding-right: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#scs-scheme .slide-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scs-scheme .slide-wrap .scs-slide {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+#scs-scheme .slide-wrap .scs-slide input {
+  display: none;
+}
+#scs-scheme .slide-wrap .scs-slide input:checked + label {
+  width: 600px;
+}
+#scs-scheme .slide-wrap .scs-slide .slide-card {
+  width: 80px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  background-size: cover;
+  margin: 0 10px;
+  border-radius: 2rem;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(28, -0.3, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+#scs-scheme .slide-wrap .scs-slide .slide-card .row {
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#scs-scheme .slide-wrap .scs-slide .slide-card .row .icon {
+  color: #fff;
+  width: 50px;
+  margin: 15px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #223;
+}
+#scs-scheme .slide-wrap .scs-slide .slide-card .row .slide-text {
+  opacity: 0;
+  height: 80px;
+  width: 520px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(30px);
+  transition-delay: 0.3s;
+  transition: all 0.3 ease;
+}
+#scs-scheme .slide-wrap .scs-slide .slide-card .row .slide-text h4 {
+  text-transform: uppercase;
+}
+#scs-scheme .slide-wrap .scs-slide .slide-card .row .slide-text p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
 #contact-me {
   width: 100%;
   color: #fff;
@@ -368,6 +456,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   padding: 10px;
   font-size: 15px;
+  border-radius: 10px;
   border: 1px solid #fff;
   background: transparent;
 }
@@ -398,6 +487,7 @@ body::-webkit-scrollbar-thumb {
   outline: none;
   padding: 10px 0;
   cursor: pointer;
+  border-radius: 10px;
   border: 1px solid #fff;
   background: transparent;
 }
