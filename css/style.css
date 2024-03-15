@@ -6,8 +6,10 @@
 }
 
 body {
-  font-family: "Quicksand", sans-serif, Arial, serif;
+  height: 100%;
+  width: 100%;
   color: #fff;
+  font-family: "Quicksand", sans-serif, Arial, serif;
   overflow-x: hidden;
   background-size: cover;
   background-position: center;
@@ -23,8 +25,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
-body #about-me, body section {
+body section {
+  overflow: hidden;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
 }
 
 .wrap .sidenav {
@@ -361,70 +369,6 @@ body #about-me, body section {
   padding-right: 20px;
   padding-top: 100px;
   padding-bottom: 100px;
-}
-#scs-scheme .slide-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#scs-scheme .slide-wrap .scs-slide {
-  height: 400px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
-}
-#scs-scheme .slide-wrap .scs-slide input {
-  display: none;
-}
-#scs-scheme .slide-wrap .scs-slide input:checked + label {
-  width: 600px;
-}
-#scs-scheme .slide-wrap .scs-slide .slide-card {
-  width: 80px;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 1.75rem;
-  background-size: cover;
-  margin: 0 10px;
-  border-radius: 2rem;
-  display: flex;
-  align-items: flex-end;
-  transition: 0.6s cubic-bezier(28, -0.3, 0, 0.99);
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-}
-#scs-scheme .slide-wrap .scs-slide .slide-card .row {
-  color: #fff;
-  display: flex;
-  flex-wrap: nowrap;
-}
-#scs-scheme .slide-wrap .scs-slide .slide-card .row .icon {
-  color: #fff;
-  width: 50px;
-  margin: 15px;
-  display: flex;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  background-color: #223;
-}
-#scs-scheme .slide-wrap .scs-slide .slide-card .row .slide-text {
-  opacity: 0;
-  height: 80px;
-  width: 520px;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-  transform: translateY(30px);
-  transition-delay: 0.3s;
-  transition: all 0.3 ease;
-}
-#scs-scheme .slide-wrap .scs-slide .slide-card .row .slide-text h4 {
-  text-transform: uppercase;
-}
-#scs-scheme .slide-wrap .scs-slide .slide-card .row .slide-text p {
-  color: #b0b0ba;
-  padding-top: 5px;
 }
 
 #contact-me {

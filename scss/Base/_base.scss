@@ -11,8 +11,10 @@
 }
 
 body {
-    font-family: "Quicksand", sans-serif, Arial, serif;
+    height: 100%;
+    width: 100%;
     color: #fff;
+    font-family: "Quicksand", sans-serif, Arial, serif;
     overflow-x: hidden;
     background-size: cover;
     background-position: center;
@@ -32,7 +34,8 @@ body {
         background: #6649b8;
     }
 
-    #about-me, section {
+    section {
+        overflow: hidden;
         background-color: rgba($color: #000, $alpha: 0.2);
     }
 
