@@ -1,5 +1,5 @@
 //=================================//
-//    SCION SCHEME LAPTOP 1200PX   
+//          SCION SCHEME   
 //=================================//
 
 #scs-scheme {
@@ -7,5 +7,59 @@
     padding-right: 20px;
     padding-top: 100px;
     padding-bottom: 100px;
-    
+
+    & > h1 {
+        font-size: 55px;
+        opacity: 0.8;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .scs-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .scs-card { 
+            width: 350px;
+            margin: 20px;
+            padding: 20px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+            background-color: rgba($color: #f4f4f4, $alpha: 0.2); 
+            transition: transform 0.5s ease ;
+
+        &:hover {
+            transform: translateY(-20px);
+        }
+
+            i {
+                font-size: 36px;
+                margin: 15px 0;
+            }
+
+            & > h1 {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #fff;
+            }
+
+            .score {
+                padding-top: 20px;
+
+                    a {
+                    color: #fff;
+                    border-radius: 5px;
+                    background-color: transparent;  
+                    }      
+            }
+        }
+
+        
+
+    }
+
+
+
 }

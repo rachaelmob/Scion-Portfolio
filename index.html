@@ -15,11 +15,6 @@
 
 
 <body>
-    <header>
-
-    </header>
-
-
 
 <div class="wrap">
 
@@ -44,7 +39,7 @@
                 <span class="nav-text">Portfolio</span> 
             </a></li>
 
-            <li><a href="#code-example">
+            <li><a href="#code-examples">
                 <i class="fa-solid fa-code"></i> 
                 <span class="nav-text">Code Examples</span>
             </a></li>
@@ -131,13 +126,23 @@
                 <div class="card">
                     <img src="./img/purple-sunset-mountain-rok-romih.jpg">
                     <div class="card-info">
+                        <input type="checkbox" name="see more" id="read-btn">
                         <h2>Heading</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                           Dignissimos vel tempore quas animi in iusto molestias 
-                           labore aut eaque veritatis, cumque eligendi? Unde voluptas
+                           Dignissimos vel tempore quas animi in iusto molestias </p>
+                        <div class="hidden">
+                            <p>labore aut eaque veritatis, cumque eligendi? Unde voluptas
                             architecto neque aspernatur quisquam velit dolores!</p>
+                        </div>
+
+                        <div>
                         <a href="#" class="card-btn">Preview</a>
+                        </div>
+                        
+                        <label for="read-btn">Show Less</label>
                     </div>
+
+                    <label for="read-btn">Read More</label>
                 </div>
 
                 <div class="card">
@@ -195,17 +200,74 @@
 
 
         <!-- ============================ CODE EXAMPLES ============================ -->
-        <section id="code-example">
+        <section id="code-examples">
             <h1>CODE EXAMPLES</h1>
             <h2>
-                COMING SOONG
+                COMING SOON
             </h2>
         </section>
 
 
         <!-- ============================ SCION SCHEME ============================ -->
         <section id="scs-scheme">
+            <h1>SCION SCHEME</h1>
 
+            <div class="scs-cards">
+
+                <div class="scs-card">
+                        <!-- <img src="../img/japan-night-pexels-pixabay.jpg" alt="..."> -->
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h1 class="scs-head">Scion Coalition Scheme</h1>                        
+                        <p class="scs-content">
+                            The Scion Coalition Scheme is an intensive, specially tailored 
+                            training program run by Netmatters in order to give willing 
+                            candidates the opportunity to enter the industry as web developers.
+                            Under the supervision of senior web developers, scions generally 
+                            aim to complete training within six to nine months. The course is 
+                            intensive and therefore the level of learning achieved is extensive 
+                            in a short space of time.
+                        </p>
+                        <a href="#"></a>
+                </div>
+
+
+                <div class="scs-card">
+                        <!-- <img src="../img/japan-night-pexels-pixabay.jpg" alt="..."> -->
+                        <i class="fa-solid fa-tree"></i>
+                        <h1 class="scs-head">Treehouse</h1>
+                        <p class="scs-content">
+                            Treehouse is an online learning community, featuring videos 
+                            covering a number of topics from basic HTML to C# programming, 
+                            iOS development, data analysis, and more. By completing courses 
+                            users can earn points, allowing them to track their progress and 
+                            see how much they?ve covered in certain areas.
+                            <div class="score">
+                                <a href="https://teamtreehouse.com/profiles/moyoko">My Total Score</a>
+                            </div>
+                            
+                        </p>
+                        <a href="#"></a>
+                </div>
+
+
+                <div class="scs-card">
+                        <!-- <img src="../img/japan-night-pexels-pixabay.jpg" alt="..."> -->
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <h1 class="scs-head">About <br> Netmatters</h1>
+                        <p class="scs-content">
+                            Established in 2008
+                            Norfolk's leading technology company
+                            Winner of the Princess Royal Training Award
+                            Winner of EDP Skills of Tomorrow Award
+                            80+ staff, 2 locations across Norfolk
+                            Digital Marketing, Website & Software development & IT Support
+                            Broad spectrum of clients, working nationwide
+                            Operate to strict company values
+                        </p>
+                        <a href="#"></a>
+                </div>
+
+            </div>
         </section>
 
 
@@ -253,13 +315,5 @@
 
     </div> <!-- content -->
 </div> <!--page wrap-->
-
-
-
-
-
-    <footer>
-
-    </footer>
 </body>
 </html>
