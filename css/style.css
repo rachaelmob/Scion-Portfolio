@@ -12,7 +12,7 @@ body {
   font-family: "Quicksand", sans-serif, Arial, serif;
   overflow-x: hidden;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), purple), url("../img/sunset-mountain-rok-romih.jpg");
 }
@@ -255,7 +255,7 @@ body section {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(128, 0, 128, 0.7)), url(../img/Horizon-roberto-nickson.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(128, 0, 128, 0.7)), url(../img/japan-night-pexels-pixabay.jpg);
 }
 #banner .banner-text {
   color: #fff;
@@ -266,9 +266,37 @@ body section {
   justify-content: center;
   text-transform: uppercase;
 }
+#banner .banner-text .banner-name {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 #banner .banner-text h1 {
-  font-size: 72px;
+  margin: 0.2em;
+  font-size: 65px;
   letter-spacing: 0.2rem;
+}
+#banner .banner-btns {
+  margin-top: 20px;
+}
+#banner .banner-btns button {
+  margin: 0 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+#banner .banner-btns button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px #fff;
 }
 
 #about-me {
@@ -332,6 +360,7 @@ body section {
   border-radius: 30px;
   border: 2px solid white;
   background-color: transparent;
+  transition: 0.3s;
 }
 #about-me .about-content .about-text .cv-btn:hover {
   cursor: pointer;
@@ -409,20 +438,36 @@ body section {
 
 #code-examples {
   height: auto;
-  padding-right: 20px;
+  width: 100vw;
+  text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 #code-examples > h1 {
   font-size: 55px;
   opacity: 0.8;
-  text-align: center;
   padding-bottom: 20px;
 }
 #code-examples h2 {
   padding: 100px 0;
   text-align: center;
   align-self: center;
+}
+#code-examples button {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+#code-examples button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px #fff;
 }
 
 #scs-scheme {

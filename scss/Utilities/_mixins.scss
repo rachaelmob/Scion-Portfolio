@@ -1,4 +1,33 @@
 //=================================//
+//              MIXINS        
+//=================================//
+
+
+//======================== =//
+//     TRANSPARENT  BTNS   
+//-------------------------//
+@mixin transpbtn {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+
+  &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      box-shadow: 0px 0px 5px #fff;
+  }
+}
+
+
+
+
+//=================================//
 //          MEDIA QUERIES       
 //=================================//
 

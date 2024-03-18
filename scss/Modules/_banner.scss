@@ -8,8 +8,10 @@
     justify-content: center;
     background-size: cover;
     background-position: center;
-    background-image:linear-gradient(rgba(0,0,0,.1), 
-    rgba(purple, 0.7)), url(../img/Horizon-roberto-nickson.jpg) ;
+    // background-image:linear-gradient(rgba(0,0,0,.1), 
+    // rgba(purple, 0.7)), url(../img/Horizon-roberto-nickson.jpg) ;
+    background-image: linear-gradient(rgba(0,0,0,.1), 
+    rgba(purple, 0.7)), url(../img/japan-night-pexels-pixabay.jpg);
 
     .banner-text {
         color: #fff;
@@ -20,10 +22,27 @@
         justify-content: center;
         text-transform: uppercase;
 
-        
+        .banner-name {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
         h1 {
-            font-size: 72px;
+            margin: 0.2em;
+            font-size: 65px;
             letter-spacing: 0.2rem;
+        }
+    }
+
+    .banner-btns {
+        margin-top: 20px;
+
+        button {
+            margin: 0 12px;
+           @include transpbtn
         }
     }
 
