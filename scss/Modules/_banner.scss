@@ -3,17 +3,23 @@
 //=================================//
 
 #banner {
-    // box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center;
     background-image:linear-gradient(rgba(0,0,0,.1), 
     rgba(purple, 0.7)), url(../img/Horizon-roberto-nickson.jpg) ;
-    // background-image: url(../img/purplepaint-anni-roenkae.jpg);
 
     .banner-text {
         color: #fff;
         font-weight: 700;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-transform: uppercase;
+
         
         h1 {
             font-size: 72px;

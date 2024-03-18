@@ -44,6 +44,26 @@ body section {
   justify-content: center;
   background: transparent;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .wrap .sidenav {
+    width: 100vw;
+    height: 5rem;
+    bottom: 0;
+    top: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .wrap .sidenav {
+    width: 20vw;
+    height: 100vh;
+    opacity: 0.8;
+  }
+}
+@media (min-width: 1200px) {
+  .wrap .sidenav {
+    column-gap: 50px;
+  }
+}
 .wrap .sidenav a {
   text-decoration: none;
   color: #fff;
@@ -52,6 +72,11 @@ body section {
   margin-top: 2rem;
   border-bottom: 1px solid white;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .wrap .sidenav .nav-title {
+    display: none;
+  }
+}
 .wrap .sidenav .nav-title h1 {
   font-size: 5rem;
   margin: 0.2rem 0;
@@ -59,10 +84,16 @@ body section {
 }
 .wrap .sidenav ul {
   display: flex;
-  flex-direction: row;
+  padding-top: 10px;
+}
+@media (min-width: 1200px) {
+  .wrap .sidenav ul {
+    flex-direction: column;
+  }
 }
 .wrap .sidenav ul li {
   list-style: none;
+  text-wrap: nowrap;
   padding: 16px;
 }
 .wrap .sidenav ul a {
@@ -102,13 +133,52 @@ body section {
   transform: translate(-50%);
   word-spacing: 5px;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .wrap .sidenav .socials {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrap .sidenav .socials {
+    top: auto;
+    bottom: -50px;
+  }
+}
 .wrap .sidenav .socials a {
   text-decoration: none;
   color: #fff;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrap .page-content {
+    width: 95vw;
+    margin-left: 20vw;
+  }
+}
+@media (min-width: 1200px) {
+  .wrap .page-content {
+    width: 80vw;
+    margin-left: 20vw;
+  }
+}
+
 .wrap section {
   padding-bottom: 80px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .wrap section {
+    height: 100vh;
+    width: 100vw;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrap section {
+    height: 100vh;
+    padding-left: 30px;
+    padding-top: 10px;
+  }
 }
 
 @media (min-width: 1px) and (max-width: 575px) {
@@ -138,88 +208,10 @@ body section {
     padding-top: 10px;
   }
 }
-@media (min-width: 576px) and (max-width: 767px) {
-  .wrap .sidenav {
-    width: 100vw;
-    height: 5rem;
-    bottom: 0;
-    top: auto;
-  }
-  .nav-title {
-    display: none;
-  }
-  .socials {
-    display: none;
-  }
-  .wrap .page-content {
-    width: 100vw;
-    margin-left: 0;
-  }
-  .wrap section {
-    height: 100vh;
-    width: 100vw;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .wrap .sidenav {
-    width: 20vw;
-    height: 100vh;
-    opacity: 0.8;
-  }
-  .wrap .sidenav ul {
-    flex-direction: column;
-  }
-  .wrap .page-content {
-    width: 95vw;
-    margin-left: 20vw;
-  }
-  .wrap section {
-    height: 100vh;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .wrap .sidenav {
-    width: 20vw;
-    height: 100vh;
-    opacity: 0.8;
-  }
-  .wrap .sidenav ul {
-    flex-direction: column;
-  }
-  .wrap .page-content {
-    width: 80vw;
-    margin-left: 20vw;
-  }
-  .wrap section {
-    height: 100vh;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
-@media (min-width: 1200px) {
-  .wrap .sidenav {
-    width: 20vw;
-    height: 100vh;
-    opacity: 0.8;
-  }
-  .wrap .sidenav ul {
-    flex-direction: column;
-  }
-  .wrap .page-content {
-    width: 80vw;
-    margin-left: 20vw;
-  }
-  .wrap section {
-    height: 100vh;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
 #banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(128, 0, 128, 0.7)), url(../img/Horizon-roberto-nickson.jpg);
@@ -227,7 +219,11 @@ body section {
 #banner .banner-text {
   color: #fff;
   font-weight: 700;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
 }
 #banner .banner-text h1 {
   font-size: 72px;

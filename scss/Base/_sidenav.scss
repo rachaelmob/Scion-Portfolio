@@ -14,7 +14,26 @@
     flex-wrap: wrap;
     justify-content: center;
     background: transparent;
-    // border-right: 1px solid rgba($color: #fff, $alpha: 0.5);
+    
+
+    @include mq(small) {
+        width: 100vw;
+        height: 5rem;
+        bottom: 0;
+        top: auto;
+    }
+
+    @include mq(medium);
+    @include mq(large);
+    @include mq(x-large){
+            width: 20vw;
+            height: 100vh;
+            opacity: 0.8;
+    }
+
+    @include mq(x-large){
+        column-gap: 50px;
+    }
 
     a {
         text-decoration: none;
@@ -24,6 +43,10 @@
     .nav-title {
         margin-top: 2rem;
         border-bottom: 1px solid white;
+
+        @include mq(small) {
+            display: none;
+        }
         
         h1 {
             font-size: 5rem;
@@ -38,10 +61,18 @@
 
     ul {
         display: flex;
-        flex-direction: row;
+        padding-top: 10px;
+        // flex-direction: row;
+
+        @include mq(medium);
+        @include mq(large);
+        @include mq(x-large){
+                flex-direction: column;
+        }
 
         li {
             list-style: none;
+            text-wrap: nowrap;
             padding: 16px;
         }
 
@@ -92,6 +123,15 @@
         left: 50%;
         transform: translate(-50%);
         word-spacing: 5px;
+
+        @include mq(small) {
+            display: none;
+        }
+
+        @include mq(medium){
+            top: auto;
+            bottom: -50px;
+        }
         
         a {
             text-decoration: none;
@@ -100,16 +140,42 @@
     }
 }
 
+    .wrap .page-content {
+
+        @include mq(medium){
+            width: 95vw;
+            margin-left: 20vw;
+        }
+
+        @include mq(medium);
+        @include mq(large);
+        @include mq(x-large){
+            width: 80vw;
+            margin-left: 20vw;
+        }
+    }
+
+
 .wrap section {
     padding-bottom: 80px;
+
+    @include mq(small) {
+        height: 100vh;
+        width:  100vw;
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+
+    @include mq(medium);
+    @include mq(large);
+    @include mq(x-large){
+        height: 100vh;
+        padding-left: 30px;
+        padding-top: 10px;
+    }
 }
 
 
-
-
-//=================================//
-//       RESPONSIVE SIDE NAV       
-//=================================//
 
 //======== X-SMALL 1 TO 567PX ========//
 @include mq(x-small){
@@ -143,119 +209,6 @@
         padding-left: 30px;
         padding-top: 10px;
     }
-}
-
-//======== SMALL 567PX ========//
-
-@include mq(small) {
-    .wrap .sidenav {
-        width: 100vw;
-        height: 5rem;
-        bottom: 0;
-        top: auto;
-    }
-
-    .nav-title {
-        display: none;
-    }
-
-    .nav-text {
-        // display: none;
-    }
-
-    .socials {
-        display: none;
-    }
-
-    .wrap .page-content {
-        width: 100vw;
-        margin-left: 0;
-    }
-
-    .wrap section {
-        height: 100vh;
-        width:  100vw;
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-}
-
-
-//======== MEDIUM 768PX ========//
-@include mq(medium)  {
-    .wrap .sidenav {
-        width: 20vw;
-        height: 100vh;
-        opacity: 0.8;
-
-        ul {
-            flex-direction: column;
-        }
-    }
- 
-    .wrap .page-content {
-        width: 95vw;
-        margin-left: 20vw;
-    }
-
-    .wrap section {
-        height: 100vh;
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-}
-
-//======== LARGE 992PX ========//
-
-@include mq(large) {
-    .wrap .sidenav {
-        width: 20vw;
-        height: 100vh;
-        opacity: 0.8;
-
-        ul {
-            flex-direction: column;
-        }
-    }
-
-
-        .wrap .page-content {
-            width: 80vw;
-            margin-left: 20vw;
-        }
-    
-        .wrap section {
-            height: 100vh;
-            padding-left: 30px;
-            padding-top: 10px;
-        }
-}
-
-//======== X-LARGE 1200PX ========//
-
-@include mq(x-large) {
-    .wrap .sidenav {
-        width: 20vw;
-        height: 100vh;
-        opacity: 0.8;
-        
-        ul {
-            flex-direction: column;
-        }
-    }
-
-
-    .wrap .page-content {
-        width: 80vw;
-        margin-left: 20vw;
-    }
-
-    .wrap section {
-        height: 100vh;
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-
 }
 
 
