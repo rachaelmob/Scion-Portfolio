@@ -35,118 +35,121 @@ body section {
   width: 100%;
 }
 
-.wrap .sidenav {
+.sidenav {
   left: 0;
   top: 0;
+  height: 100vh;
   position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   background: transparent;
 }
-@media (min-width: 575px) and (max-width: 767px) {
-  .wrap .sidenav {
-    width: 100vw;
-    height: 5rem;
-    bottom: 0;
-    top: auto;
+@media (width < 768px) {
+  .sidenav {
+    background-color: purple;
+    justify-content: flex-start;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
-  .wrap .sidenav {
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidenav {
     width: 20vw;
     height: 100vh;
     opacity: 0.8;
   }
 }
-@media (min-width: 991px) and (max-width: 1199px) {
-  .wrap .sidenav {
+@media (min-width: 992px) and (max-width: 1200px) {
+  .sidenav {
     width: 20vw;
     height: 100vh;
     opacity: 0.8;
   }
 }
-@media (min-width: 1199px) {
-  .wrap .sidenav {
+@media (min-width: 1200px) {
+  .sidenav {
     width: 20vw;
     height: 100vh;
     opacity: 0.8;
     column-gap: 50px;
   }
 }
-.wrap .sidenav a {
-  text-decoration: none;
+.sidenav button {
+  padding: 4px 0px 0px 8px;
+  border: none;
+  background: none;
+}
+.sidenav button i {
   color: #fff;
+  font-size: 2rem;
 }
-.wrap .sidenav .nav-title {
-  margin-top: 2rem;
-  border-bottom: 1px solid white;
-}
-@media (min-width: 575px) and (max-width: 767px) {
-  .wrap .sidenav .nav-title {
+@media (width >= 768px) {
+  .sidenav button {
     display: none;
   }
 }
-.wrap .sidenav .nav-title h1 {
+.sidenav .sidenav-close {
+  display: flex;
+}
+.sidenav a {
+  text-decoration: none;
+  color: #fff;
+}
+.sidenav .nav-title {
+  margin-top: 2rem;
+  border-bottom: 1px solid white;
+}
+.sidenav .nav-title h1 {
   font-size: 5rem;
   margin: 0.2rem 0;
   text-transform: uppercase;
 }
-.wrap .sidenav ul {
+.sidenav ul {
   display: flex;
   padding-top: 10px;
-  flex-direction: row;
+  flex-direction: column;
 }
-@media (min-width: 767px) and (max-width: 991px) {
-  .wrap .sidenav ul {
-    flex-direction: column;
+@media (width < 768px) {
+  .sidenav ul {
+    padding-left: 19px;
   }
 }
-@media (min-width: 991px) and (max-width: 1199px) {
-  .wrap .sidenav ul {
-    flex-direction: column;
-  }
-}
-@media (min-width: 1199px) {
-  .wrap .sidenav ul {
-    flex-direction: column;
-  }
-}
-.wrap .sidenav ul li {
+.sidenav ul li {
   list-style: none;
   text-wrap: nowrap;
   padding: 16px;
 }
-.wrap .sidenav ul a {
+.sidenav ul a {
   filter: grayscale(100%) opacity(0.7);
   transition: var(--transition-speed);
 }
-.wrap .sidenav ul a:hover {
+.sidenav ul a:hover {
   filter: grayscale(0%) opacity(1);
   border: 1px solid #fff;
   box-shadow: 0px 0px 5px #fff;
   padding: 10px;
   border-radius: 20px;
 }
-.wrap .sidenav ul a i {
+.sidenav ul a i {
   margin-right: 5px;
 }
-.wrap .sidenav ul a .fa-address-card {
+.sidenav ul a .fa-address-card {
   color: lightblue;
 }
-.wrap .sidenav ul a .fa-square-pied-piper {
+.sidenav ul a .fa-square-pied-piper {
   color: pink;
 }
-.wrap .sidenav ul a .fa-code {
+.sidenav ul a .fa-code {
   color: lightblue;
 }
-.wrap .sidenav ul a .fa-graduation-cap {
+.sidenav ul a .fa-graduation-cap {
   color: pink;
 }
-.wrap .sidenav ul a .fa-pager {
+.sidenav ul a .fa-pager {
   color: lightblue;
 }
-.wrap .sidenav .socials {
+.sidenav .socials {
   font-size: 25px;
   position: absolute;
   bottom: 8px;
@@ -154,35 +157,37 @@ body section {
   transform: translate(-50%);
   word-spacing: 5px;
 }
-@media (min-width: 575px) and (max-width: 767px) {
-  .wrap .sidenav .socials {
-    display: none;
+@media (width < 768px) {
+  .sidenav .socials {
+    left: 0;
+    font-size: 20px;
+    transform: translate(130%);
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
-  .wrap .sidenav .socials {
+@media (min-width: 768px) and (max-width: 992px) {
+  .sidenav .socials {
     top: auto;
     bottom: -50px;
   }
 }
-.wrap .sidenav .socials a {
+.sidenav .socials a {
   text-decoration: none;
   color: #fff;
 }
 
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .wrap .page-content {
     width: 95vw;
     margin-left: 20vw;
   }
 }
-@media (min-width: 991px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .wrap .page-content {
     width: 80vw;
     margin-left: 20vw;
   }
 }
-@media (min-width: 1199px) {
+@media (min-width: 1200px) {
   .wrap .page-content {
     width: 80vw;
     margin-left: 20vw;
@@ -190,31 +195,29 @@ body section {
 }
 
 .wrap section {
+  padding-top: 30px;
   padding-bottom: 80px;
 }
-@media (min-width: 575px) and (max-width: 767px) {
+@media (min-width: 575px) and (max-width: 768px) {
   .wrap section {
-    height: 100vh;
-    width: 100vw;
-    padding-left: 30px;
     padding-top: 10px;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .wrap section {
     height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
   }
 }
-@media (min-width: 991px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .wrap section {
     height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
   }
 }
-@media (min-width: 1199px) {
+@media (min-width: 1200px) {
   .wrap section {
     height: 100vh;
     padding-left: 30px;
@@ -222,33 +225,6 @@ body section {
   }
 }
 
-@media (min-width: 1px) and (max-width: 575px) {
-  .wrap .sidenav {
-    width: 100vw;
-    height: 5rem;
-    bottom: 0;
-    top: auto;
-  }
-  .nav-title {
-    display: none;
-  }
-  .nav-text {
-    display: none;
-  }
-  .socials {
-    display: none;
-  }
-  .wrap .page-content {
-    width: 100vw;
-    margin-left: 0;
-  }
-  .wrap section {
-    width: 100vw;
-    height: 100vh;
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
 #banner {
   padding-left: 0;
   display: flex;
@@ -369,14 +345,14 @@ body section {
   box-shadow: 0px 0px 5px #fff;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   #about-me {
     width: 100%;
     height: auto;
     padding: 70px 0px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   #about-me .about-content img {
     margin-bottom: 35px;
   }

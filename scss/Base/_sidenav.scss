@@ -6,42 +6,59 @@
     width: 100%;
 }
 
-.wrap .sidenav {
+
+.sidenav {
     left: 0;
     top: 0;
+    height: 100vh;
     position: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background: transparent;
     
-
-    @include mq(small) {
-        width: 100vw;
-        height: 5rem;
-        bottom: 0;
-        top: auto;
+    @media (width < $break--med){
+        background-color: purple;
+        justify-content: flex-start;
+        translate: 100vw 0;
+        transition: translate 0.5s ease-in-out;
     }
 
+    @mixin vw-vh-op {
+        width: 20vw;
+        height: 100vh;
+        opacity: 0.8;
+    }
     @include mq(medium){
-        width: 20vw;
-        height: 100vh;
-        opacity: 0.8;
+        @include vw-vh-op;
     }
-
-
     @include mq(large){
-            width: 20vw;
-            height: 100vh;
-            opacity: 0.8;
+        @include vw-vh-op;
     }
-
     @include mq(x-large){
-        width: 20vw;
-        height: 100vh;
-        opacity: 0.8;
+        @include vw-vh-op;
         column-gap: 50px;
     }
+
+        //button
+        button {
+            padding: 4px 0px 0px 8px;
+            border: none;
+            background: none;
+
+            i {
+                color: #fff;
+                font-size: 2rem;
+            }
+    
+            @media (width >= $break--med){
+                display: none;
+            }
+        }
+    
+        .sidenav-close{
+            display: flex;
+        }
 
     a {
         text-decoration: none;
@@ -52,9 +69,6 @@
         margin-top: 2rem;
         border-bottom: 1px solid white;
 
-        @include mq(small) {
-            display: none;
-        }
         
         h1 {
             font-size: 5rem;
@@ -66,22 +80,25 @@
     }
 
 
-
     ul {
         display: flex;
         padding-top: 10px;
-        flex-direction: row;
+        flex-direction: column;
+
+        @media (width < $break--med){
+            padding-left: 19px;
+        }
 
         @include mq(medium){ 
-            flex-direction: column;
+            // flex-direction: column;
         }
 
         @include mq(large){
-            flex-direction: column;
+            // flex-direction: column;
     }
 
         @include mq(x-large){
-                flex-direction: column;
+                // flex-direction: column;
         }
 
         li {
@@ -126,7 +143,7 @@
             .fa-pager {
                 color: lightblue;
             }
-       }
+    }
     }
 
     //=== SOCIALS ===//
@@ -138,9 +155,12 @@
         transform: translate(-50%);
         word-spacing: 5px;
 
-        @include mq(small) {
-            display: none;
+        @media (width < $break--med ){
+            left: 0;
+            font-size: 20px;
+            transform: translate(130%);
         }
+
 
         @include mq(medium){
             top: auto;
@@ -153,6 +173,12 @@
         }
     }
 }
+
+
+
+
+
+//==== PAGE CONTENT 
 
     .wrap .page-content {
 
@@ -173,13 +199,12 @@
     }
 
 
+//==== INDIVIDUAL PAGE SECTIONS
 .wrap section {
+    padding-top: 30px;
     padding-bottom: 80px;
 
     @include mq(small) {
-        height: 100vh;
-        width:  100vw;
-        padding-left: 30px;
         padding-top: 10px;
     }
 
@@ -202,40 +227,5 @@
     }
 }
 
-
-
-//======== X-SMALL 1 TO 567PX ========//
-@include mq(x-small){
-    .wrap .sidenav {
-        width: 100vw;
-        height: 5rem;
-        bottom: 0;
-        top: auto;
-    }
-
-    .nav-title {
-        display: none;
-    }
-
-    .nav-text {
-        display: none;
-    }
-
-    .socials {
-        display: none;
-    }
-
-    .wrap .page-content {
-        width: 100vw;
-        margin-left: 0;
-    }
-
-    .wrap section {
-        width: 100vw;
-        height: 100vh;
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-}
 
 
