@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5cbcf5da8c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
 </head>
 
 
@@ -21,13 +22,14 @@
     <!-- ============================ SIDE BAR ============================ -->
     <div class="sidenav">
         <nav>
-            <button class="sidenav-open">
+            <span class="nav-label" hidden>Navigation</span>
+            <button id="openBtn" class="sidenav-open" aria-expanded="false" aria-labelledby="nav-label">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
-            <div class="sidenav-menu">
-                <button class="sidenav-close">
-                <i class="fa-solid fa-bars"></i>
+            <div class="sidenav-menu" role="dialog" aria-labelledby="nav-label">
+                <button id="closeBtn" class="sidenav-close" aria-label="close">
+                    <i class="fa-solid fa-xmark"></i>
                 </button>
                 <div class="nav-title">
                 <a href="#banner">
@@ -74,7 +76,7 @@
 
 
     <!-- ============================ PAGE CONTENT ============================ -->
-    <div class="page-content">
+    <div id="page-content">
 
         <!-- ============================ BANNER ============================ -->
         <section id="banner">
@@ -199,15 +201,6 @@
 
 
 
-        <!-- ============================ CODE EXAMPLES ============================ -->
-        <!-- <section id="code-examples">
-            <h1>CODE EXAMPLES</h1>
-            <h2>
-                COMING SOON
-            </h2>
-        </section> -->
-
-
         <!-- ============================ SCION SCHEME ============================ -->
         <section id="scs-scheme">
             <h1>SCION SCHEME</h1>
@@ -311,9 +304,9 @@
             </div>
         </section>
 
-
-
     </div> <!-- content -->
 </div> <!--page wrap-->
+
+<script src="js/sidenav.js"></script>
 </body>
 </html>

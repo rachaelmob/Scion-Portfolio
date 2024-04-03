@@ -45,12 +45,12 @@
       @media (min-width: #{$break--sml}) and (max-width: $break--med) {
         @content;
       }
-      //======== MEDIUM 768PX to 991px  ========//
+      //======== MEDIUM 768PX to 992px  ========//
     } @else if $breakpoint == "medium" {
       @media (min-width: #{$break--med}) and (max-width: $break--l) {
         @content;
       }
-      //======== LARGE 992PX to 1199px========//
+      //======== LARGE 992PX to 2000px========//
     } @else if $breakpoint == "large" {
       @media (min-width: #{$break--l}) and (max-width: $break--xl) {
         @content;

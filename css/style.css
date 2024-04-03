@@ -35,9 +35,14 @@ body section {
   width: 100%;
 }
 
+nav {
+  min-width: 200px;
+}
+
 .sidenav {
   left: 0;
   top: 0;
+  z-index: 999;
   height: 100vh;
   position: fixed;
   display: flex;
@@ -45,44 +50,62 @@ body section {
   justify-content: center;
   background: transparent;
 }
-@media (width < 768px) {
-  .sidenav {
-    background-color: purple;
-    justify-content: flex-start;
-    translate: 100vw 0;
-    transition: translate 0.5s ease-in-out;
-  }
-}
 @media (min-width: 768px) and (max-width: 992px) {
   .sidenav {
     width: 20vw;
-    height: 100vh;
+    min-height: 100vh;
     opacity: 0.8;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .sidenav {
     width: 20vw;
-    height: 100vh;
+    min-height: 100vh;
     opacity: 0.8;
   }
 }
 @media (min-width: 1200px) {
   .sidenav {
     width: 20vw;
-    height: 100vh;
+    min-height: 100vh;
     opacity: 0.8;
     column-gap: 50px;
   }
 }
+.sidenav .sidenav-open[aria-expanded=true] + .sidenav-menu {
+  translate: 0;
+}
+@media (prefers-reduced-motion) {
+  .sidenav .sidenav-open[aria-expanded=true] {
+    opacity: 1;
+  }
+}
+@media (width < 768px) {
+  .sidenav .sidenav-menu {
+    height: 100vh;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    translate: -100vw 0;
+    transition: translate 0.5s ease-in-out;
+  }
+}
+@media (width < 768px) and (prefers-reduced-motion) {
+  .sidenav .sidenav-menu {
+    translate: 0;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+}
 .sidenav button {
-  padding: 4px 0px 0px 8px;
+  padding: 8px 0px 0px 10px;
   border: none;
   background: none;
 }
 .sidenav button i {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 @media (width >= 768px) {
   .sidenav button {
@@ -91,6 +114,11 @@ body section {
 }
 .sidenav .sidenav-close {
   display: flex;
+}
+@media (width >= 768px) {
+  .sidenav .sidenav-close {
+    display: none;
+  }
 }
 .sidenav a {
   text-decoration: none;
@@ -103,6 +131,7 @@ body section {
 .sidenav .nav-title h1 {
   font-size: 5rem;
   margin: 0.2rem 0;
+  text-align: center;
   text-transform: uppercase;
 }
 .sidenav ul {
@@ -126,7 +155,7 @@ body section {
 }
 .sidenav ul a:hover {
   filter: grayscale(0%) opacity(1);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   box-shadow: 0px 0px 5px #fff;
   padding: 10px;
   border-radius: 20px;
@@ -176,19 +205,19 @@ body section {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .wrap .page-content {
+  .wrap #page-content {
     width: 95vw;
     margin-left: 20vw;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  .wrap .page-content {
+  .wrap #page-content {
     width: 80vw;
     margin-left: 20vw;
   }
 }
 @media (min-width: 1200px) {
-  .wrap .page-content {
+  .wrap #page-content {
     width: 80vw;
     margin-left: 20vw;
   }
@@ -197,6 +226,7 @@ body section {
 .wrap section {
   padding-top: 30px;
   padding-bottom: 80px;
+  min-height: 100vh;
 }
 @media (min-width: 575px) and (max-width: 768px) {
   .wrap section {
@@ -205,21 +235,18 @@ body section {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .wrap section {
-    height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .wrap section {
-    height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
   }
 }
 @media (min-width: 1200px) {
   .wrap section {
-    height: 100vh;
     padding-left: 30px;
     padding-top: 10px;
   }
