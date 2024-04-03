@@ -42,7 +42,7 @@ function closeMobileMenu(){
   
     setTimeout(() => {
         sideNavMenu.style.transition = 'none';
-        openBtn.style.display = 'flex';
+        openBtn.style.display = 'flex'; 
       }, 500);
 }
 

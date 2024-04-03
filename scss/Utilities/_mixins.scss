@@ -50,7 +50,7 @@
       @media (min-width: #{$break--med}) and (max-width: $break--l) {
         @content;
       }
-      //======== LARGE 992PX to 2000px========//
+      //======== LARGE 992PX to 1200px========//
     } @else if $breakpoint == "large" {
       @media (min-width: #{$break--l}) and (max-width: $break--xl) {
         @content;
