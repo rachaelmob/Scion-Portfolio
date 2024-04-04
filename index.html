@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
     <script src="https://kit.fontawesome.com/5cbcf5da8c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="js/jQuery.js"></script>
 </head>
 
 
@@ -80,14 +82,31 @@
 
         <!-- ============================ BANNER ============================ -->
         <section id="banner">
-
             <div class="banner-text">
-                    <span class="hello"> Hello, I Am </span>
                     <div class="banner-name">
-                    <h1>Moyo</h1>
-                    <h1>Banjoko</h1>
+                        <h1>Moyo</h1>
+                        <h1>Banjoko</h1>
                     </div>
-                    <span>And I am a web developer.</span>
+ 
+                    <div id="fade-text">
+                        <span id="text1"></span>
+                        <span id="text2"></span>
+                    </div>
+                    
+                    <!-- The SVG filter used to create the merging effect -->
+                    <svg id="filters" hidden>
+                        <defs>
+                            <filter id="threshold">
+                                <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                                <feColorMatrix in="SourceGraphic"
+                                        type="matrix"
+                                        values="1 0 0 0 0
+                                                        0 1 0 0 0
+                                                        0 0 1 0 0
+                                                        0 0 0 255 -140" />
+                            </filter>
+                        </defs>
+                    </svg>
                     
                     <div class="banner-btns">
                         <button>Contact Me</button>
@@ -306,7 +325,7 @@
 
     </div> <!-- content -->
 </div> <!--page wrap-->
-
+<script src="js/banner-text.js"></script>   
 <script src="js/sidenav.js"></script>
 </body>
 </html>

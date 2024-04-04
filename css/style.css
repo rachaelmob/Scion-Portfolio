@@ -268,15 +268,16 @@ body section {
   background-size: cover;
   background-position: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(128, 0, 128, 0.7)), url(../img/japan-night-pexels-pixabay.jpg);
+  /* Cool font from Google Fonts! */
+  @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+  /* Your average text styling */
 }
 #banner .banner-text {
   color: #fff;
-  font-weight: 700;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  text-transform: uppercase;
 }
 #banner .banner-text .banner-name {
   margin: 20px 0;
@@ -284,14 +285,39 @@ body section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  font-family: "poppins", "Quicksand", sans-serif, Arial, serif;
 }
 #banner .banner-text h1 {
-  margin: 0.2em;
-  font-size: 65px;
+  margin: 0 0.5em;
+  font-size: 90px;
   letter-spacing: 0.2rem;
 }
+#banner body {
+  margin: 0px;
+  background: transparent;
+}
+#banner #fade-text {
+  /* Center the text in the viewport. */
+  margin: auto;
+  width: 100vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+  /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+  filter: url(#threshold) blur(0.6px);
+}
+#banner #text1, #banner #text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 40pt;
+  text-align: center;
+  user-select: none;
+}
 #banner .banner-btns {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 #banner .banner-btns button {
   margin: 0 12px;

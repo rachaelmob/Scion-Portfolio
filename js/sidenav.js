@@ -22,9 +22,8 @@ function setupSideNav(e) {
 
 
 function openMobileMenu(){
-    openBtn.style.display = 'none';
+    $('#openBtn').hide(); 
     openBtn.setAttribute('aria-expanded', 'true');
-    // $('#openBtn').hide(); //-> Needs jQuery
     sideNavMenu.removeAttribute('inert');
     sideNavMenu.removeAttribute('style');
     pageContent.setAttribute('inert', '');
@@ -34,7 +33,6 @@ function openMobileMenu(){
 
 function closeMobileMenu(){
     openBtn.setAttribute('aria-expanded', 'false');
-    // $('#openBtn').show(); //-> Needs jQuery
     sideNavMenu.setAttribute('inert', '');
     pageContent.removeAttribute('inert');
     bodyScrollLockUpgrade.enableBodyScroll(body);
@@ -42,8 +40,9 @@ function closeMobileMenu(){
   
     setTimeout(() => {
         sideNavMenu.style.transition = 'none';
-        openBtn.style.display = 'flex'; 
+        // $('#openBtn').show(); //-> FAULTY
       }, 500);
+
 }
 
 setupSideNav(media);

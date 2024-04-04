@@ -9,19 +9,20 @@
     justify-content: center;
     background-size: cover;
     background-position: center;
-    // background-image:linear-gradient(rgba(0,0,0,.1), 
-    // rgba(purple, 0.7)), url(../img/Horizon-roberto-nickson.jpg) ;
     background-image: linear-gradient(rgba(0,0,0,.1), 
     rgba(purple, 0.7)), url(../img/japan-night-pexels-pixabay.jpg);
 
+
+
+
     .banner-text {
         color: #fff;
-        font-weight: 700;
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+
 
         .banner-name {
             margin: 20px 0;
@@ -29,17 +30,54 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            font-family: 'poppins', "Quicksand", sans-serif, Arial, serif; 
         }
 
         h1 {
-            margin: 0.2em;
-            font-size: 65px;
+            margin: 0 0.5em;
+            font-size: 90px;
             letter-spacing: 0.2rem;
         }
     }
 
+        /* Cool font from Google Fonts! */
+    @import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+    body {
+        margin: 0px;
+        background: transparent;
+    }
+
+    #fade-text {
+        /* Center the text in the viewport. */
+        // position: absolute;
+        margin: auto;
+        width: 100vw;
+        height: 80pt;
+        top: 0;
+        bottom: 0;
+        
+        /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+        filter: url(#threshold) blur(0.6px);
+    }
+
+    /* Your average text styling */
+    #text1, #text2 {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+        
+        font-family: 'Raleway', sans-serif;
+        font-size: 40pt;
+        
+        text-align: center;
+        
+        user-select: none;
+    }
+
     .banner-btns {
-        margin-top: 20px;
+        margin-top: 0px;
 
         button {
             margin: 0 12px;
