@@ -294,38 +294,51 @@
                 <div class="input-group">
                     <input type="text" required id="firstname" name="user_firstname"> 
                     <label for="firstname"><i class="fa-solid fa-user-pen"></i> Your Name</label>
+                    <div class="error-hint hide-hint">Please insert your name</div>
                 </div>
 
                 <div class="input-group">
                     <input type="text" required id="lastname" name="user_lastname">
                     <label for="lastname"><i class="fa-solid fa-user"></i> Your Surname</label>
+                    <div class="error-hint hide-hint">Please insert a name</div>
                 </div>
 
                 <div class="input-group">
                     <input type="email" required id="email" name="user_email">
                     <label for="email"><i class="fa-regular fa-envelope"></i> Email Address</label>
+                    <div class="error-hint hide-hint">Please insert a valid email</div>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" required id="telephone" name="user_telephone">
+                    <label for="telephone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                    <div class="error-hint hide-hint">Please insert a valid number</div>
                 </div>
 
                 <div class="input-group">
                     <input type="text" required id="subject" name="user_subject"> 
                     <label for="subject"><i class="fa-solid fa-pen-fancy"></i> Subject</label>
+                    <div class="error-hint hide-hint">Please include a subject</div>
                 </div>
 
                 <div class="input-group">
                     <textarea id="message" name="user_message" rows="8" required></textarea>
-                    <label for="messgae"><i class="fa-regular fa-comments"></i> Your Message</label>        
+                    <label for="messgae"><i class="fa-regular fa-comments"></i> Your Message</label>
+                    <div class="error-hint hide-hint">Please type a message</div>        
                 </div>
-                <button type="button" class="submit">
+                <button type="submit" class="submit">
                 <i class="fa-solid fa-paper-plane"></i> 
                  SUBMIT</button>
             </form>
+            <div class="thankyou hide-hint">Thank You For Contacting Me!</div>
 
             </div>
         </section>
 
     </div> <!-- content -->
 </div> <!--page wrap-->
-<script src="js/banner-text.js"></script>   
 <script src="js/sidenav.js"></script>
+<script src="js/banner-text.js"></script>   
+<script src="js/contact-form.js"></script>
 </body>
 </html>

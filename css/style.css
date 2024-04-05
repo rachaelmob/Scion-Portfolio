@@ -564,6 +564,9 @@ body section {
   padding-bottom: 50px;
   padding-left: 0;
 }
+#contact-me .hide-hint {
+  display: none;
+}
 #contact-me h1 {
   font-size: 55px;
   opacity: 0.8;
@@ -614,6 +617,9 @@ body section {
 #contact-me .form-container form button:hover, #contact-me .form-container form button:focus {
   box-shadow: 0px 0px 5px #fff;
 }
+#contact-me .form-container form .error-hint {
+  color: rgb(255, 0, 89);
+}
 #contact-me .form-container form button {
   width: 100%;
   color: #fff;
@@ -623,6 +629,11 @@ body section {
   border-radius: 10px;
   border: 1px solid #fff;
   background: transparent;
+}
+#contact-me .thankyou {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
