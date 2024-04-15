@@ -199,6 +199,11 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.2rem;
   opacity: 0.8;
 }
+@media (max-width: 480px) {
+  #banner .banner-text h1 {
+    font-size: 3rem;
+  }
+}
 #banner .banner-text h1.typewrite {
   color: #2a342a;
   position: relative;

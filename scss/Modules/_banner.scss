@@ -39,6 +39,8 @@
             letter-spacing: 0.2rem;
             opacity: 0.8;
 
+            @media (max-width: $break--sml){font-size: 3rem;}
+
             &.typewrite{
                 color: #2a342a;
                 position: relative;
