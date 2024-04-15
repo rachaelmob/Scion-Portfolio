@@ -19,27 +19,61 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0,0,0,.1), purple), 
-    url("../img/sunset-mountain-rok-romih.jpg");  
+    // background-image: linear-gradient(rgba(0,0,0,.1), purple), 
+    // url("../img/sunset-mountain-rok-romih.jpg");  
+    background-color: #0a0a0a;
+    // background-color: #fff;
 
-    &::-webkit-scrollbar {
-        width: 0.2rem;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: #1e1e24;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: #6649b8;
-    }
-
-    section {
-        overflow: hidden;
-        background-color: rgba($color: #000, $alpha: 0.2);
-    }
-
+    &::-webkit-scrollbar { width: 0.2rem; }
+    &::-webkit-scrollbar-track { background: #1e1e24 ;}
+    &::-webkit-scrollbar-thumb { background: #456d54 ;}
 }
+
+.body-container {
+    height: 100%;
+    width: 100%;
+
+    //=== STICKY/FIXED SIDE NAV ===//
+    #sidenav {
+        top: 0;
+        left: 0;
+        width: 15vw;
+        z-index: 999;
+        height: 100vh;
+        position: fixed;
+        @media (max-width: $break--med){display: none;}
+    }
+
+    //=== ALL PAGE CONTENT FOR STICKY SIDE NAV ===//
+    .page-content {
+        width: 85vw;
+        margin-left: 15vw;
+        @media (max-width: $break--med){
+            width:100vw;
+            margin-left: 0;
+        }
+ 
+
+        //=== INDIVIDUAL SECTIONS ===//
+        section {
+            min-height: 100vh;
+            padding-top: 30px;
+            padding-bottom: 80px;
+            overflow: hidden;
+            // background-color: rgba($color: #000, $alpha: 0.2);
+            
+            @include mq(small) { padding-top: 10px;}
+            @include mq(medium) {
+                padding-left: 30px;
+                padding-top: 10px;
+            }
+            
+        }
+    }
+}
+
+
+
 
 
 

@@ -37,22 +37,22 @@
 @mixin mq($breakpoint) {
   //======== X-SMALL 1 TO 567PX ========//
     @if $breakpoint == "x-small" {
-      @media (min-width: $break--xs) and (max-width: $break--sml) {
+      @media (min-width: $break--xs) and (min-width: #{$break--sml}){
         @content;
       }
-      //======== SMALL 567PX - 768PX ========//
+      //======== SMALL 480px - 768PX ========//
     } @else if $breakpoint == "small" {
-      @media (min-width: #{$break--sml}) and (max-width: $break--med) {
+      @media (min-width: #{$break--sml}) and (min-width: #{$break--med}){
         @content;
       }
-      //======== MEDIUM 768PX to 992px  ========//
+      //======== MEDIUM 768PX  ========//
     } @else if $breakpoint == "medium" {
-      @media (min-width: #{$break--med}) and (max-width: $break--l) {
+      @media (min-width: #{$break--med}){
         @content;
       }
       //======== LARGE 992PX to 1200px========//
     } @else if $breakpoint == "large" {
-      @media (min-width: #{$break--l}) and (max-width: $break--xl) {
+      @media (min-width: #{$break--l}){
         @content;
       }
       //======== X-LARGE 1200PX+ ========//

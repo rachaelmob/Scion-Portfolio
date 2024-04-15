@@ -7,21 +7,98 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
     <script src="https://kit.fontawesome.com/5cbcf5da8c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+    <script src="js/jQuery.js"></script>
 </head>
 
+
+
 <body>
-<section id="code-examples">
-    <h1>CODE EXAMPLES</h1>
 
-    <a href="index.html">
-        <button>
-            <i class="fa-solid fa-arrow-left"></i> 
-            Go Back</button>
-    </a>
+<div class="body-container">
 
-    <h2>
-        COMING SOON
-    </h2>
-</section>
+    <!-- ============================ SIDE BAR ============================ -->
+    <div id="sidenav">
+        <div class="nav-title">
+            <a href="./index.html">
+            <h1>MB</h1>
+            </a>
+        </div>
+        
+        <ul>
+            <li><a href="./index.html#about-me">
+                <i class="fa-solid fa-address-card"></i> 
+                <span class="nav-text">About Me</span> 
+            </a></li>
+
+            <li><a href="./my-portfolio.html#my-portfolio">
+                <i class="fa-brands fa-square-pied-piper"></i> 
+                <span class="nav-text">Portfolio</span> 
+            </a></li>
+
+            <li><a href="./codeex.html#code-examples">
+                <i class="fa-solid fa-code"></i> 
+                <span class="nav-text">Code Examples</span>
+            </a></li>
+
+            <li><a href="./scs.html#scs-scheme">
+                <i class="fa-solid fa-graduation-cap"></i> 
+                <span class="nav-text">SCS Scheme</span>
+            </a></li>
+
+            <li><a href="./index.html#contact-me"><i class="fa-solid fa-pager"></i> 
+                <span class="nav-text">Contact me</span>
+            </a></li>
+        </ul>
+
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/moyosore-banjoko-90a892166/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-discord" target="_blank"></i></a>
+        </div>
+    </div>
+
+
+    <!-- ============================ PAGE CONTENT ============================ -->
+    <div class="page-content">
+        
+
+        <!-- ============================ BANNER ============================ -->
+        <section id="banner">
+            <div class="banner-text">
+                    <div class="banner-name">
+                        <h1>Moyo</h1>
+                        <h1>Banjoko</h1>
+                    </div>               
+                    <div class="banner-btns">
+                        <button>Contact Me</button>
+                        <button>Hire Me</button>
+                    </div>
+            </div>
+        </section>
+
+        
+        <!-- ============================ CODE EXAMPLES ============================ -->
+        <section id="code-examples">
+            <h1>CODE EXAMPLES</h1>
+        
+            <!-- <a href="index.html">
+                <button>
+                    <i class="fa-solid fa-arrow-left"></i> 
+                    Go Back</button>
+            </a> -->
+        
+            <h2>
+                COMING SOON
+            </h2>
+        </section>
+        
+
+    </div> <!-- content -->
+</div> <!--page wrap-->
+<script src="js/sidenav.js"></script>
+<script src="js/banner.js"></script>   
+<script src="js/contact-form.js"></script>
 </body>
+</html>

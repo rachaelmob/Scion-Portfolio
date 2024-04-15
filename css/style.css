@@ -14,7 +14,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), purple), url("../img/sunset-mountain-rok-romih.jpg");
+  background-color: #0a0a0a;
 }
 body::-webkit-scrollbar {
   width: 0.2rem;
@@ -23,160 +23,116 @@ body::-webkit-scrollbar-track {
   background: #1e1e24;
 }
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
-body section {
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: #456d54;
 }
 
-.wrap {
+.body-container {
   height: 100%;
   width: 100%;
 }
-
-.sidenav {
-  left: 0;
+.body-container #sidenav {
   top: 0;
+  left: 0;
+  width: 15vw;
   z-index: 999;
   height: 100vh;
   position: fixed;
+}
+@media (max-width: 768px) {
+  .body-container #sidenav {
+    display: none;
+  }
+}
+.body-container .page-content {
+  width: 85vw;
+  margin-left: 15vw;
+}
+@media (max-width: 768px) {
+  .body-container .page-content {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+.body-container .page-content section {
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+@media (min-width: 480px) and (min-width: 768px) {
+  .body-container .page-content section {
+    padding-top: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .body-container .page-content section {
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+}
+
+#sidenav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: transparent;
+  background-color: #161814;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .sidenav {
-    width: 20vw;
-    min-height: 100vh;
-    opacity: 0.8;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .sidenav {
-    width: 20vw;
-    min-height: 100vh;
-    opacity: 0.8;
-  }
-}
-@media (min-width: 1200px) {
-  .sidenav {
-    width: 20vw;
-    min-height: 100vh;
-    opacity: 0.8;
-    column-gap: 50px;
-  }
-}
-.sidenav nav {
+#sidenav nav {
   min-width: 200px;
 }
-.sidenav .sidenav-open[aria-expanded=true] + .sidenav-menu {
-  translate: 0;
-}
-@media (prefers-reduced-motion) {
-  .sidenav .sidenav-open[aria-expanded=true] {
-    opacity: 1;
-  }
-}
-@media (width >= 768px) {
-  .sidenav .sidenav-open[aria-expanded=true] {
-    display: none;
-  }
-}
-@media (width < 768px) {
-  .sidenav .sidenav-menu {
-    height: 100vh;
-    justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(12px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    translate: -100vw 0;
-    transition: translate 0.5s ease-in-out;
-  }
-}
-@media (width < 768px) and (prefers-reduced-motion) {
-  .sidenav .sidenav-menu {
-    translate: 0;
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-  }
-}
-.sidenav button {
-  padding: 8px 0px 0px 10px;
-  border: none;
-  background: none;
-}
-.sidenav button i {
-  color: #fff;
-  font-size: 2.5rem;
-}
-@media (width >= 768px) {
-  .sidenav button {
-    display: none;
-  }
-}
-.sidenav .sidenav-close {
-  display: flex;
-}
-@media (width >= 768px) {
-  .sidenav .sidenav-close {
-    display: none;
-  }
-}
-.sidenav a {
+#sidenav a {
   text-decoration: none;
   color: #fff;
 }
-.sidenav .nav-title {
+#sidenav .nav-title {
   margin-top: 2rem;
   border-bottom: 1px solid white;
 }
-.sidenav .nav-title h1 {
+#sidenav .nav-title h1 {
   font-size: 5rem;
   margin: 0.2rem 0;
   text-align: center;
   text-transform: uppercase;
 }
-.sidenav ul {
+#sidenav ul {
   display: flex;
   padding-top: 10px;
   flex-direction: column;
 }
-.sidenav ul li {
+#sidenav ul li {
   list-style: none;
   text-wrap: nowrap;
   padding: 16px;
 }
-.sidenav ul li:hover {
+#sidenav ul li:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-.sidenav ul a {
+#sidenav ul a {
   filter: grayscale(100%) opacity(0.7);
   transition: var(--transition-speed);
 }
-.sidenav ul a:hover {
+#sidenav ul a:hover {
   filter: grayscale(0%) opacity(1);
 }
-.sidenav ul a i {
+#sidenav ul a i {
   margin-right: 5px;
 }
-.sidenav ul a .fa-address-card {
+#sidenav ul a .fa-address-card {
   color: lightblue;
 }
-.sidenav ul a .fa-square-pied-piper {
+#sidenav ul a .fa-square-pied-piper {
   color: pink;
 }
-.sidenav ul a .fa-code {
+#sidenav ul a .fa-code {
   color: lightblue;
 }
-.sidenav ul a .fa-graduation-cap {
+#sidenav ul a .fa-graduation-cap {
   color: pink;
 }
-.sidenav ul a .fa-pager {
+#sidenav ul a .fa-pager {
   color: lightblue;
 }
-.sidenav .socials {
+#sidenav .socials {
   font-size: 25px;
   position: absolute;
   bottom: 8px;
@@ -185,79 +141,31 @@ body section {
   word-spacing: 5px;
 }
 @media (width < 768px) {
-  .sidenav .socials {
+  #sidenav .socials {
     left: 0;
     font-size: 20px;
     transform: translate(130%);
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  .sidenav .socials {
+@media (min-width: 768px) {
+  #sidenav .socials {
     top: auto;
     bottom: -50px;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
-  .sidenav .socials {
+@media (min-width: 992px) {
+  #sidenav .socials {
     bottom: -70%;
   }
 }
 @media (min-width: 1200px) {
-  .sidenav .socials {
+  #sidenav .socials {
     bottom: -110%;
   }
 }
-.sidenav .socials a {
+#sidenav .socials a {
   text-decoration: none;
   color: #fff;
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .wrap #page-content {
-    width: 95vw;
-    margin-left: 20vw;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .wrap #page-content {
-    width: 80vw;
-    margin-left: 20vw;
-  }
-}
-@media (min-width: 1200px) {
-  .wrap #page-content {
-    width: 80vw;
-    margin-left: 20vw;
-  }
-}
-
-.wrap section {
-  padding-top: 30px;
-  padding-bottom: 80px;
-  min-height: 100vh;
-}
-@media (min-width: 575px) and (max-width: 768px) {
-  .wrap section {
-    padding-top: 10px;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .wrap section {
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  .wrap section {
-    padding-left: 30px;
-    padding-top: 10px;
-  }
-}
-@media (min-width: 1200px) {
-  .wrap section {
-    padding-left: 30px;
-    padding-top: 10px;
-  }
 }
 
 #banner {
@@ -267,10 +175,44 @@ body section {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(128, 0, 128, 0.7)), url(../img/japan-night-pexels-pixabay.jpg);
-  /* Cool font from Google Fonts! */
-  @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
-  /* Your average text styling */
+  position: relative;
+}
+#banner .parallax1 {
+  position: absolute;
+  bottom: -100px;
+  width: 1500px;
+  right: 0;
+  z-index: 19;
+}
+#banner .parallax2 {
+  position: absolute;
+  bottom: -100px;
+  width: 1500px;
+  right: 0;
+  z-index: 18;
+}
+#banner .parallax3 {
+  position: absolute;
+  bottom: -100px;
+  width: 1500px;
+  right: 0;
+  z-index: 17;
+}
+#banner .sky {
+  position: absolute;
+  bottom: 250px;
+  width: 2100px;
+  right: 0;
+  z-index: 17;
+}
+#banner .shadow {
+  position: absolute;
+  bottom: 100%;
+  height: 300px;
+  width: 100%;
+  left: 0;
+  z-index: 20;
+  background: linear-gradient(to top, #151515, transparent);
 }
 #banner .banner-text {
   color: #fff;
@@ -292,29 +234,28 @@ body section {
   margin: 0 0.5em;
   font-size: 90px;
   letter-spacing: 0.2rem;
+  opacity: 0.8;
+  z-index: 30;
 }
-#banner body {
-  margin: 0px;
-  background: transparent;
+#banner .banner-text h1.typewrite {
+  color: #2a342a;
+  position: relative;
 }
-#banner #fade-text {
-  /* Center the text in the viewport. */
-  margin: auto;
-  width: 100vw;
-  height: 80pt;
-  top: 0;
-  bottom: 0;
-  /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-  filter: url(#threshold) blur(0.6px);
+#banner .banner-text h1.typewrite::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  margin-left: 0.5rem;
+  border: 5px solid #fff;
+  animation: blink 1s infinite;
 }
-#banner #text1, #banner #text2 {
-  position: absolute;
-  width: 100%;
-  display: inline-block;
-  font-family: "Raleway", sans-serif;
-  font-size: 40pt;
-  text-align: center;
-  user-select: none;
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #banner .banner-btns {
   margin-top: 0px;
@@ -475,8 +416,6 @@ body section {
 }
 
 #code-examples {
-  height: auto;
-  width: 100vw;
   text-align: center;
   padding-top: 100px;
   padding-bottom: 100px;

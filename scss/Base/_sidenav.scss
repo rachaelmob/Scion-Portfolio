@@ -1,102 +1,16 @@
-//=================================//
-//          STICKY SIDEBAR         
-//=================================//
-.wrap {
-    height: 100%;
-    width: 100%;
-}
+//====================================//
+//       STICKY SIDEBAR STYLING         
+//====================================//
 
-
-
-.sidenav {
-    left: 0;
-    top: 0;
-    z-index: 999;
-    height: 100vh;
-    position: fixed;
+#sidenav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: transparent;
+    // background-color: #222222; 
+    background-color: #161814;
 
-    @mixin vw-vh-op {
-        width: 20vw;
-        min-height: 100vh;
-        opacity: 0.8;
-    }
-    @include mq(medium){
-        @include vw-vh-op;
-    }
-    @include mq(large){
-        @include vw-vh-op;
-    }
-    @include mq(x-large){
-        @include vw-vh-op;
-        column-gap: 50px;
-    }
 
-    nav{
-        min-width: 200px;
-    }
-
-    .sidenav-open[aria-expanded= 'true']{
-        + .sidenav-menu {
-            translate: 0;
-        }
-
-        @media (prefers-reduced-motion) {
-            opacity: 1;
-          }
-
-          @media (width >= $break--med){
-            display: none;
-        }
-    }
-
-    .sidenav-menu {
-        @media (width < $break--med){
-            height: 100vh;
-            justify-content: flex-end;
-            background-color: rgba(0, 0, 0, 0.15);
-            // background-color: purple;
-            // background-color: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(12px);
-            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-            translate: -100vw 0;
-            transition: translate 0.5s ease-in-out;
-        }
-
-        @media (width < $break--med) and (prefers-reduced-motion) {
-            translate: 0;
-            opacity: 0;
-            transition: opacity 500ms ease-in-out;
-          }
-    }
-
-        button {
-            padding: 8px 0px 0px 10px;
-            border: none;
-            background: none;
-
-            i {
-                color: #fff;
-                font-size: 2.5rem;
-            }
-    
-            @media (width >= $break--med){
-                display: none;
-            }
-        }
-
-    
-        .sidenav-close{
-            display: flex;
-
-            @media (width >= $break--med){
-                display: none;
-            }
-        }
-
+    nav { min-width: 200px ;} //STOP NAV FROM MOVING ON HOVER 
 
     a {
         text-decoration: none;
@@ -113,7 +27,6 @@
             margin: 0.2rem 0;
             text-align: center;
             text-transform: uppercase;
-            
         }
 
     }
@@ -173,7 +86,7 @@
             .fa-pager {
                 color: lightblue;
             }
-    }
+        }
     }
 
     //=== SOCIALS ===//
@@ -213,56 +126,6 @@
 }
 
 
-
-
-
-//==== PAGE CONTENT 
-
-    .wrap #page-content {
-
-        @include mq(medium){
-            width: 95vw;
-            margin-left: 20vw;
-        }
-
-        @include mq(large){
-            width: 80vw;
-            margin-left: 20vw;
-        }
-
-        @include mq(x-large){
-            width: 80vw;
-            margin-left: 20vw;
-        }
-    }
-
-
-//==== INDIVIDUAL PAGE SECTIONS
-.wrap section {
-    padding-top: 30px;
-    padding-bottom: 80px;
-    min-height: 100vh;
-
-    @include mq(small) {
-        padding-top: 10px;
-    }
-
-    @include mq(medium) {
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-
-    @include mq(large){
-
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-    
-    @include mq(x-large){
-        padding-left: 30px;
-        padding-top: 10px;
-    }
-}
 
 
 

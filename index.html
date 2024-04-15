@@ -19,100 +19,72 @@
 
 <body>
 
-<div class="wrap">
+<div class="body-container">
 
     <!-- ============================ SIDE BAR ============================ -->
-    <div class="sidenav">
-        <nav>
-            <span class="nav-label" hidden>Navigation</span>
-            <button id="openBtn" class="sidenav-open" aria-expanded="false" aria-labelledby="nav-label">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <div id="sidenav">
+        <div class="nav-title">
+            <a href="./index.html">
+            <h1>MB</h1>
+            </a>
+        </div>
+        
+        <ul>
+            <li><a href="./index.html#about-me">
+                <i class="fa-solid fa-address-card"></i> 
+                <span class="nav-text">About Me</span> 
+            </a></li>
 
-            <div class="sidenav-menu" role="dialog" aria-labelledby="nav-label">
-                <button id="closeBtn" class="sidenav-close" aria-label="close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="nav-title">
-                <a href="#banner">
-                <h1>MB</h1>
-                <!-- <i class="fa-solid fa-shield-cat"></i> -->
-                </a>
-                </div>
-                
-                <ul>
-                    <li><a href="#about-me">
-                        <i class="fa-solid fa-address-card"></i> 
-                        <span class="nav-text">About Me</span> 
-                    </a></li>
+            <li><a href="./my-portfolio.html#my-portfolio">
+                <i class="fa-brands fa-square-pied-piper"></i> 
+                <span class="nav-text">Portfolio</span> 
+            </a></li>
 
-                    <li><a href="#my-portfolio">
-                        <i class="fa-brands fa-square-pied-piper"></i> 
-                        <span class="nav-text">Portfolio</span> 
-                    </a></li>
+            <li><a href="./codeex.html#code-examples">
+                <i class="fa-solid fa-code"></i> 
+                <span class="nav-text">Code Examples</span>
+            </a></li>
 
-                    <li><a href="codeex.html#code-examples">
-                        <i class="fa-solid fa-code"></i> 
-                        <span class="nav-text">Code Examples</span>
-                    </a></li>
+            <li><a href="./scs.html#scs-scheme">
+                <i class="fa-solid fa-graduation-cap"></i> 
+                <span class="nav-text">SCS Scheme</span>
+            </a></li>
 
-                    <li><a href="#scs-scheme">
-                        <i class="fa-solid fa-graduation-cap"></i> 
-                        <span class="nav-text">SCS Scheme</span>
-                    </a></li>
+            <li><a href="#contact-me"><i class="fa-solid fa-pager"></i> 
+                <span class="nav-text">Contact me</span>
+            </a></li>
+        </ul>
 
-                    <li><a href="#contact-me"><i class="fa-solid fa-pager"></i> 
-                        <span class="nav-text">Contact me</span>
-                    </a></li>
-                </ul>
-
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/moyosore-banjoko-90a892166/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-discord" target="_blank"></i></a>
-                </div>
-            </div>
-        </nav>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/moyosore-banjoko-90a892166/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-discord" target="_blank"></i></a>
+        </div>
     </div>
 
 
-
-
     <!-- ============================ PAGE CONTENT ============================ -->
-    <div id="page-content">
+    <div class="page-content">
+
 
         <!-- ============================ BANNER ============================ -->
         <section id="banner">
             <div class="banner-text">
-                    <div class="banner-name">
-                        <h1>Moyo</h1>
-                        <h1>Banjoko</h1>
-                    </div>
- 
-                    <div id="fade-text">
-                        <span id="text1"></span>
-                        <span id="text2"></span>
-                    </div>
-                    
-                    <!-- The SVG filter used to create the merging effect -->
-                    <svg id="filters" hidden>
-                        <defs>
-                            <filter id="threshold">
-                                <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
-                                <feColorMatrix in="SourceGraphic"
-                                        type="matrix"
-                                        values="1 0 0 0 0
-                                                        0 1 0 0 0
-                                                        0 0 1 0 0
-                                                        0 0 0 255 -140" />
-                            </filter>
-                        </defs>
-                    </svg>
-                    
-                    <div class="banner-btns">
-                        <button>Contact Me</button>
-                        <button>Hire Me</button>
-                    </div>
+                <div class="banner-name">
+                    <h1>Moyo</h1>
+                    <!-- <h1>Banjoko</h1> -->
+                    <h1 class="typewrite"></h1>
+                </div>               
+                <div class="banner-btns">
+                    <button>Contact Me</button>
+                    <button>Hire Me</button>
+                </div>
             </div>
+            <img src="/img/Parallax/front mountain.png" class="parallax1 translate" data-speed="-0.25" alt="">
+            <img src="/img/Parallax/mid mountain.png" class="parallax2 translate" data-speed="-0.2" alt="">
+            <img src="/img/Parallax/back mountain.png" class="parallax3 translate" data-speed="-0.4" alt="">
+            <img src="/img/Parallax/sky.png" class="sky translate" data-speed="-0.3" alt="">
+
+            <div class="shadow"></div>
         </section>
 
 
@@ -131,154 +103,10 @@
                         dignissimos, ipsam accusamus inventore blanditiis in voluptas sint incidunt? 
                         Quam at provident aliquid odio dicta, ipsa accusantium ratione a harum veniam?
                     </p>
-                    <form method="get" action="./GENERAL CV 2023 PDF.pdf" target="_blank">
+                    <form method="get" action="./pdf/GENERAL CV 2023 PDF.pdf CV 2023 PDF.pdf" target="_blank">
                     <button class="cv-btn">Download CV</button>
                     </form>
                 </div>
-            </div>
-        </section>
-
-
-
-        <!-- ============================ PORTFOLIO ============================ -->
-        <section id="my-portfolio">
-            <h1>MY PORTFOLIO</h1>
-
-            <div class="card-wrap">
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Netmatters</h2>
-                        <p>
-                         A project assigned by netmatters to recreate their website 
-                         homepage using only HTML and CSS.
-                        </p>
-                        <a href="https://rachaelmob.github.io/Netmatters-Projects/" class="card-btn" target="_blank">
-                        Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-                
-            </div>
-
-        </section>
-
-
-
-        <!-- ============================ SCION SCHEME ============================ -->
-        <section id="scs-scheme">
-            <h1>SCION SCHEME</h1>
-
-            <div class="scs-cards">
-
-                <div class="scs-card">
-                        <!-- <img src="../img/japan-night-pexels-pixabay.jpg" alt="..."> -->
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <h1 class="scs-head">Scion Coalition Scheme</h1>                        
-                        <p class="scs-content">
-                            The Scion Coalition Scheme is an intensive, specially tailored 
-                            training program run by Netmatters in order to give willing 
-                            candidates the opportunity to enter the industry as web developers.
-                            Under the supervision of senior web developers, scions generally 
-                            aim to complete training within six to nine months. The course is 
-                            intensive and therefore the level of learning achieved is extensive 
-                            in a short space of time.
-                        </p>
-                        <a href="#"></a>
-                </div>
-
-
-                <div class="scs-card">
-                        <!-- <img src="../img/japan-night-pexels-pixabay.jpg" alt="..."> -->
-                        <i class="fa-solid fa-tree"></i>
-                        <h1 class="scs-head">Treehouse</h1>
-                        <p class="scs-content">
-                            Treehouse is an online learning community, featuring videos 
-                            covering a number of topics from basic HTML to C# programming, 
-                            iOS development, data analysis, and more. By completing courses 
-                            users can earn points, allowing them to track their progress and 
-                            see how much they?ve covered in certain areas.
-                            <div class="score">
-                                <a href="https://teamtreehouse.com/profiles/moyoko">My Total Score</a>
-                            </div>
-                            
-                        </p>
-                        <a href="#"></a>
-                </div>
-
-
-                <div class="scs-card">
-                        <!-- <img src="../img/japan-night-pexels-pixabay.jpg" alt="..."> -->
-                        <i class="fa-solid fa-diagram-project"></i>
-                        <h1 class="scs-head">About <br> Netmatters</h1>
-                        <p class="scs-content">
-                            Established in 2008
-                            Norfolk's leading technology company
-                            Winner of the Princess Royal Training Award
-                            Winner of EDP Skills of Tomorrow Award
-                            80+ staff, 2 locations across Norfolk
-                            Digital Marketing, Website & Software development & IT Support
-                            Broad spectrum of clients, working nationwide
-                            Operate to strict company values
-                        </p>
-                        <a href="#"></a>
-                </div>
-
             </div>
         </section>
 
@@ -337,8 +165,9 @@
 
     </div> <!-- content -->
 </div> <!--page wrap-->
+<script src="app.js"></script>
 <script src="js/sidenav.js"></script>
-<script src="js/banner-text.js"></script>   
+<script src="js/banner.js"></script>   
 <script src="js/contact-form.js"></script>
 </body>
 </html>
