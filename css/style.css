@@ -175,35 +175,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   background-size: cover;
   background-position: center;
-  position: relative;
-}
-#banner .parallax1 {
-  position: absolute;
-  bottom: -100px;
-  width: 1500px;
-  right: 0;
-  z-index: 19;
-}
-#banner .parallax2 {
-  position: absolute;
-  bottom: -100px;
-  width: 1500px;
-  right: 0;
-  z-index: 18;
-}
-#banner .parallax3 {
-  position: absolute;
-  bottom: -100px;
-  width: 1500px;
-  right: 0;
-  z-index: 17;
-}
-#banner .sky {
-  position: absolute;
-  bottom: 250px;
-  width: 2100px;
-  right: 0;
-  z-index: 17;
+  background-image: url(../img/mountains-eberhard-grossgasteiger.jpg);
 }
 #banner .shadow {
   position: absolute;
@@ -235,7 +207,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 90px;
   letter-spacing: 0.2rem;
   opacity: 0.8;
-  z-index: 30;
 }
 #banner .banner-text h1.typewrite {
   color: #2a342a;
