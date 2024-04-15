@@ -1,19 +1,540 @@
-/* Error: Expected expression.
- *    ,
- * 45 |                 max-width: ;
- *    |                            ^
- *    '
- *   scss\Modules\_banner.scss 45:28  @import
- *   scss\Modules\_index.scss 5:9     @import
- *   scss\style.scss 25:9             root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 45 \2502                  max-width: ;\d\a    \2502                             ^\a    \2575 \a   scss\\Modules\\_banner.scss 45:28  @import\a   scss\\Modules\\_index.scss 5:9     @import\a   scss\\style.scss 25:9             root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
+
+body {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-family: "Quicksand", sans-serif, Arial, serif;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #0a0a0a;
+}
+body::-webkit-scrollbar {
+  width: 0.2rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb {
+  background: #456d54;
+}
+
+.body-container {
+  height: 100%;
+  width: 100%;
+}
+.body-container #sidenav {
+  top: 0;
+  left: 0;
+  width: 15vw;
+  z-index: 999;
+  height: 100vh;
+  position: fixed;
+}
+@media (max-width: 768px) {
+  .body-container #sidenav {
+    display: none;
+  }
+}
+.body-container .page-content {
+  width: 85vw;
+  margin-left: 15vw;
+}
+@media (max-width: 768px) {
+  .body-container .page-content {
+    width: 100vw;
+    margin-left: 0;
+  }
+}
+.body-container .page-content section {
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+@media (min-width: 480px) and (min-width: 768px) {
+  .body-container .page-content section {
+    padding-top: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .body-container .page-content section {
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+}
+
+#sidenav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #161814;
+}
+#sidenav nav {
+  min-width: 200px;
+}
+#sidenav a {
+  text-decoration: none;
+  color: #fff;
+}
+#sidenav .nav-title {
+  margin-top: 2rem;
+  border-bottom: 1px solid white;
+}
+#sidenav .nav-title h1 {
+  font-size: 5rem;
+  margin: 0.2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#sidenav ul {
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+}
+#sidenav ul li {
+  list-style: none;
+  text-wrap: nowrap;
+  padding: 16px;
+}
+#sidenav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+#sidenav ul a {
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+#sidenav ul a:hover {
+  filter: grayscale(0%) opacity(1);
+}
+#sidenav ul a i {
+  margin-right: 5px;
+}
+#sidenav ul a .fa-address-card {
+  color: lightblue;
+}
+#sidenav ul a .fa-square-pied-piper {
+  color: pink;
+}
+#sidenav ul a .fa-code {
+  color: lightblue;
+}
+#sidenav ul a .fa-graduation-cap {
+  color: pink;
+}
+#sidenav ul a .fa-pager {
+  color: lightblue;
+}
+#sidenav .socials {
+  font-size: 25px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%);
+  word-spacing: 5px;
+}
+@media (width < 768px) {
+  #sidenav .socials {
+    left: 0;
+    font-size: 20px;
+    transform: translate(130%);
+  }
+}
+@media (min-width: 768px) {
+  #sidenav .socials {
+    top: auto;
+    bottom: -50px;
+  }
+}
+@media (min-width: 992px) {
+  #sidenav .socials {
+    bottom: -70%;
+  }
+}
+@media (min-width: 1200px) {
+  #sidenav .socials {
+    bottom: -110%;
+  }
+}
+#sidenav .socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#banner {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/mountains-eberhard-grossgasteiger.jpg);
+}
+#banner .banner-text {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#banner .banner-text .banner-name {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "poppins", "Quicksand", sans-serif, Arial, serif;
+}
+#banner .banner-text h1 {
+  margin: 0 0.5em;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  opacity: 0.8;
+}
+#banner .banner-text h1.typewrite {
+  color: #2a342a;
+  position: relative;
+}
+#banner .banner-text h1.typewrite::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  margin-left: 0.5rem;
+  border: 5px solid #fff;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#banner .banner-btns {
+  margin-top: 0px;
+}
+#banner .banner-btns button {
+  margin: 0 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+#banner .banner-btns button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+#about-me {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 25px;
+}
+#about-me .about-content {
+  width: 1280px;
+  max-width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+}
+#about-me .about-content img {
+  height: auto;
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20%;
+  filter: grayscale(100%);
+  filter: hue-rotate(10deg);
+  transition: transform 0.5s ease;
+}
+#about-me .about-content img:hover {
+  transform: translateY(50px);
+}
+#about-me .about-content .about-text {
+  width: 350px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+#about-me .about-content .about-text h1 {
+  font-size: 85px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+#about-me .about-content .about-text h5 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+#about-me .about-content .about-text p {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+}
+#about-me .about-content .about-text .cv-btn {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+#about-me .about-content .about-text .cv-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+@media screen and (max-width: 992px) {
+  #about-me {
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about-me .about-content img {
+    margin-bottom: 35px;
+  }
+  #about-me .about-text h1 {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+}
+#my-portfolio {
+  height: auto;
+  padding-bottom: 100px;
+}
+#my-portfolio h1 {
+  font-size: 55px;
+  opacity: 0.8;
+  text-align: center;
+}
+#my-portfolio .card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 100px;
+}
+#my-portfolio .card-wrap .card {
+  color: #000;
+  width: 15rem;
+  background-color: rgba(244, 244, 244, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+#my-portfolio .card-wrap .card:hover {
+  transform: translateY(-20px);
+  background-color: #f4f4f4;
+}
+#my-portfolio .card-wrap .card img {
+  max-width: 100%;
+  height: 100% auto;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+}
+#my-portfolio .card-wrap .card .card-info {
+  padding: 20px;
+}
+#my-portfolio .card-wrap .card .card-info h2 {
+  margin-bottom: 10px;
+}
+#my-portfolio .card-wrap .card .card-info p {
+  margin-bottom: 20px;
+}
+#my-portfolio .card-wrap .card .card-btn {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: purple;
+}
+
+#code-examples {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#code-examples > h1 {
+  font-size: 55px;
+  opacity: 0.8;
+  padding-bottom: 20px;
+}
+#code-examples h2 {
+  padding: 100px 0;
+  text-align: center;
+  align-self: center;
+}
+#code-examples button {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+#code-examples button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px #fff;
+}
+
+#scs-scheme {
+  height: auto;
+  padding-right: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#scs-scheme > h1 {
+  font-size: 55px;
+  opacity: 0.8;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#scs-scheme .scs-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#scs-scheme .scs-cards .scs-card {
+  width: 350px;
+  margin: 20px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(244, 244, 244, 0.2);
+  transition: transform 0.5s ease;
+}
+#scs-scheme .scs-cards .scs-card:hover {
+  transform: translateY(-20px);
+}
+#scs-scheme .scs-cards .scs-card i {
+  font-size: 36px;
+  margin: 15px 0;
+}
+#scs-scheme .scs-cards .scs-card > h1 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+#scs-scheme .scs-cards .scs-card .score {
+  padding-top: 20px;
+}
+#scs-scheme .scs-cards .scs-card .score a {
+  color: #fff;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#contact-me {
+  width: 100%;
+  color: #fff;
+  height: auto;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+  padding-left: 0;
+}
+#contact-me .hide-hint {
+  display: none;
+}
+#contact-me h1 {
+  font-size: 55px;
+  opacity: 0.8;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#contact-me .form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-me .form-container form {
+  width: 90%;
+  max-width: 600px;
+}
+#contact-me .form-container form .input-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+#contact-me .form-container form input, #contact-me .form-container form textarea {
+  outline: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+}
+#contact-me .form-container form label {
+  cursor: text;
+  height: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+}
+#contact-me .form-container form input:focus ~ label,
+#contact-me .form-container form input:valid ~ label,
+#contact-me .form-container form textarea:focus ~ label,
+#contact-me .form-container form textarea:valid ~ label {
+  top: -35px;
+  font-size: 14px;
+}
+#contact-me .form-container form input:hover, #contact-me .form-container form input:focus,
+#contact-me .form-container form textarea:hover, #contact-me .form-container form textarea:focus,
+#contact-me .form-container form button:hover, #contact-me .form-container form button:focus {
+  box-shadow: 0px 0px 5px #fff;
+}
+#contact-me .form-container form .error-hint {
+  color: rgb(255, 0, 89);
+}
+#contact-me .form-container form button {
+  width: 100%;
+  color: #fff;
+  outline: none;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+}
+#contact-me .thankyou {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */
