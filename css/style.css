@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
 }
 @media (max-width: 768px) {
-  .body-container #sidenav {
+  .body-container #sidenav nav.fixedmenu {
     display: none;
   }
 }
@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 80px;
   overflow: hidden;
 }
-@media (min-width: 480px) and (min-width: 768px) {
+@media (min-width: 480px) {
   .body-container .page-content section {
     padding-top: 10px;
   }
@@ -71,14 +71,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-#sidenav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #161814;
-}
-#sidenav nav {
-  min-width: 200px;
+#sidenav nav.fixed-menu {
+  background-color: #263628;
 }
 #sidenav a {
   text-decoration: none;
@@ -144,7 +138,6 @@ body::-webkit-scrollbar-thumb {
   #sidenav .socials {
     left: 0;
     font-size: 20px;
-    transform: translate(130%);
   }
 }
 @media (min-width: 768px) {
@@ -166,6 +159,66 @@ body::-webkit-scrollbar-thumb {
 #sidenav .socials a {
   text-decoration: none;
   color: #fff;
+}
+#sidenav .hamburger {
+  top: 2%;
+  left: 20%;
+  width: 50px;
+  z-index: 100;
+  display: block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  appearance: none;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #sidenav .hamburger {
+    display: none;
+  }
+}
+#sidenav .hamburger::after, #sidenav .hamburger::before, #sidenav .hamburger .bar {
+  content: "";
+  width: 100%;
+  height: 5px;
+  margin: 9px 0;
+  display: block;
+  background-color: #fff;
+  transition: 0.4s;
+}
+#sidenav .hamburger.is-active .bar {
+  opacity: 0;
+}
+#sidenav .hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-13px, 6px);
+}
+#sidenav .hamburger.is-active::after {
+  transform: rotate(45deg) translate(-12px, -8px);
+}
+#sidenav nav.mobile-nav {
+  top: 0;
+  right: 100%;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 98;
+  position: fixed;
+  background-color: #161814;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s;
+}
+@media (min-width: 768px) {
+  #sidenav nav.mobile-nav {
+    display: none;
+  }
+}
+#sidenav nav.mobile-nav.is-active {
+  right: 0;
+}
+#sidenav nav.mobile-nav .menu-list {
+  display: flex;
 }
 
 #banner {

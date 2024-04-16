@@ -37,12 +37,12 @@
 @mixin mq($breakpoint) {
   //======== X-SMALL 1 TO 567PX ========//
     @if $breakpoint == "x-small" {
-      @media (min-width: $break--xs) and (min-width: #{$break--sml}){
+      @media (min-width: $break--xs) and (max-width: #{$break--sml}){
         @content;
       }
-      //======== SMALL 480px - 768PX ========//
+      //======== SMALL 480px========//
     } @else if $breakpoint == "small" {
-      @media (min-width: #{$break--sml}) and (min-width: #{$break--med}){
+      @media (min-width: #{$break--sml}){
         @content;
       }
       //======== MEDIUM 768PX  ========//

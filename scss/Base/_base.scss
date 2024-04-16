@@ -41,7 +41,10 @@ body {
         z-index: 999;
         height: 100vh;
         position: fixed;
-        @media (max-width: $break--med){display: none;}
+
+        nav.fixedmenu {
+            @media (max-width: $break--med){display: none;}
+        }
     }
 
     //=== ALL PAGE CONTENT FOR STICKY SIDE NAV ===//

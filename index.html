@@ -23,42 +23,92 @@
 
     <!-- ============================ SIDE BAR ============================ -->
     <div id="sidenav">
-        <div class="nav-title">
-            <a href="./index.html">
-            <h1>MB</h1>
-            </a>
-        </div>
-        
-        <ul>
-            <li><a href="./index.html#about-me">
-                <i class="fa-solid fa-address-card"></i> 
-                <span class="nav-text">About Me</span> 
-            </a></li>
+        <nav class="fixedmenu">
+            <div class="nav-title">
+                <a href="./index.html">
+                <h1>MB</h1>
+                </a>
+            </div>
+            
+            <div class="menu-list">
+                <ul>
+                    <li><a href="./index.html#about-me">
+                        <i class="fa-solid fa-address-card"></i> 
+                        <span class="nav-text">About Me</span> 
+                    </a></li>
 
-            <li><a href="./my-portfolio.html#my-portfolio">
-                <i class="fa-brands fa-square-pied-piper"></i> 
-                <span class="nav-text">Portfolio</span> 
-            </a></li>
+                    <li><a href="./my-portfolio.html#my-portfolio">
+                        <i class="fa-brands fa-square-pied-piper"></i> 
+                        <span class="nav-text">Portfolio</span> 
+                    </a></li>
 
-            <li><a href="./codeex.html#code-examples">
-                <i class="fa-solid fa-code"></i> 
-                <span class="nav-text">Code Examples</span>
-            </a></li>
+                    <li><a href="./codeex.html#code-examples">
+                        <i class="fa-solid fa-code"></i> 
+                        <span class="nav-text">Code Examples</span>
+                    </a></li>
 
-            <li><a href="./scs.html#scs-scheme">
-                <i class="fa-solid fa-graduation-cap"></i> 
-                <span class="nav-text">SCS Scheme</span>
-            </a></li>
+                    <li><a href="./scs.html#scs-scheme">
+                        <i class="fa-solid fa-graduation-cap"></i> 
+                        <span class="nav-text">SCS Scheme</span>
+                    </a></li>
 
-            <li><a href="#contact-me"><i class="fa-solid fa-pager"></i> 
-                <span class="nav-text">Contact me</span>
-            </a></li>
-        </ul>
+                    <li><a href="./my-portfolio.html#contact-me"><i class="fa-solid fa-pager"></i> 
+                        <span class="nav-text">Contact me</span>
+                    </a></li>
+                </ul>
+            </div>
 
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/moyosore-banjoko-90a892166/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-discord" target="_blank"></i></a>
-        </div>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/moyosore-banjoko-90a892166/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-discord" target="_blank"></i></a>
+            </div>
+        </nav>
+
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+        <nav class="mobile-nav">
+            <div class="nav-title">
+                <a href="./index.html">
+                <h1>MB</h1>
+                </a>
+            </div>
+            
+            <div class="menu-list">
+                <ul>
+                    <li><a href="./index.html#about-me">
+                        <i class="fa-solid fa-address-card"></i> 
+                        <span class="nav-text">About Me</span> 
+                    </a></li>
+
+                    <li><a href="./my-portfolio.html#my-portfolio">
+                        <i class="fa-brands fa-square-pied-piper"></i> 
+                        <span class="nav-text">Portfolio</span> 
+                    </a></li>
+
+                    <li><a href="./codeex.html#code-examples">
+                        <i class="fa-solid fa-code"></i> 
+                        <span class="nav-text">Code Examples</span>
+                    </a></li>
+
+                    <li><a href="./scs.html#scs-scheme">
+                        <i class="fa-solid fa-graduation-cap"></i> 
+                        <span class="nav-text">SCS Scheme</span>
+                    </a></li>
+
+                    <li><a href="./my-portfolio.html#contact-me"><i class="fa-solid fa-pager"></i> 
+                        <span class="nav-text">Contact me</span>
+                    </a></li>
+                </ul>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/moyosore-banjoko-90a892166/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord" target="_blank"></i></a>
+                </div>  
+            </div>
+
+
+        </nav>
     </div>
 
 
@@ -106,56 +156,6 @@
 
 
 
-        <!-- ============================ CONTACT ME FORM ============================ -->
-        <section id="contact-me">
-            <h1>CONTACT ME</h1>
-
-            <div class="form-container">
-            <form action="index.html" method="post">
-
-                <div class="input-group">
-                    <input type="text" required id="firstname" name="user_firstname"> 
-                    <label for="firstname"><i class="fa-solid fa-user-pen"></i> Your Name</label>
-                    <div class="error-hint hide-hint">Please insert your name</div>
-                </div>
-
-                <div class="input-group">
-                    <input type="text" required id="lastname" name="user_lastname">
-                    <label for="lastname"><i class="fa-solid fa-user"></i> Your Surname</label>
-                    <div class="error-hint hide-hint">Please insert a name</div>
-                </div>
-
-                <div class="input-group">
-                    <input type="email" required id="email" name="user_email">
-                    <label for="email"><i class="fa-regular fa-envelope"></i> Email Address</label>
-                    <div class="error-hint hide-hint">Please insert a valid email</div>
-                </div>
-
-                <div class="input-group">
-                    <input type="tel" required id="telephone" name="user_telephone">
-                    <label for="telephone"><i class="fa-solid fa-phone"></i> Phone Number</label>
-                    <div class="error-hint hide-hint">Please insert a valid number</div>
-                </div>
-
-                <div class="input-group">
-                    <input type="text" required id="subject" name="user_subject"> 
-                    <label for="subject"><i class="fa-solid fa-pen-fancy"></i> Subject</label>
-                    <div class="error-hint hide-hint">Please include a subject</div>
-                </div>
-
-                <div class="input-group">
-                    <textarea id="message" name="user_message" rows="8" required></textarea>
-                    <label for="messgae"><i class="fa-regular fa-comments"></i> Your Message</label>
-                    <div class="error-hint hide-hint">Please type a message</div>        
-                </div>
-                <button type="submit" class="submit">
-                <i class="fa-solid fa-paper-plane"></i> 
-                 SUBMIT</button>
-            </form>
-            <div class="thankyou hide-hint">Thank You For Contacting Me!</div>
-
-            </div>
-        </section>
 
     </div> <!-- content -->
 </div> <!--page wrap-->
