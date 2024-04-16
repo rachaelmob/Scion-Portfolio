@@ -42,7 +42,7 @@ body {
         height: 100vh;
         position: fixed;
 
-        nav.fixedmenu {
+        nav.fixed-menu {
             @media (max-width: $break--med){display: none;}
         }
     }

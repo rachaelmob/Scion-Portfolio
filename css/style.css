@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
 }
 @media (max-width: 768px) {
-  .body-container #sidenav nav.fixedmenu {
+  .body-container #sidenav nav.fixed-menu {
     display: none;
   }
 }
@@ -71,6 +71,14 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+#sidenav {
+  background-color: #263628;
+}
+@media (max-width: 768px) {
+  #sidenav {
+    background-color: transparent;
+  }
+}
 #sidenav nav.fixed-menu {
   background-color: #263628;
 }
