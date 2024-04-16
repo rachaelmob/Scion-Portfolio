@@ -11,9 +11,6 @@ body {
   color: #fff;
   font-family: "Quicksand", sans-serif, Arial, serif;
   overflow-x: hidden;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
   background-color: #0a0a0a;
 }
 body::-webkit-scrollbar {
@@ -37,8 +34,14 @@ body::-webkit-scrollbar-thumb {
   z-index: 999;
   height: 100vh;
   position: fixed;
+  background-color: #161814;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .body-container #sidenav {
+    background-color: transparent;
+  }
+}
+@media (max-width: 992px) {
   .body-container #sidenav nav.fixed-menu {
     display: none;
   }
@@ -47,7 +50,7 @@ body::-webkit-scrollbar-thumb {
   width: 85vw;
   margin-left: 15vw;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .body-container .page-content {
     width: 100vw;
     margin-left: 0;
@@ -71,17 +74,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-#sidenav {
-  background-color: #263628;
-}
-@media (max-width: 768px) {
-  #sidenav {
-    background-color: transparent;
-  }
-}
-#sidenav nav.fixed-menu {
-  background-color: #263628;
-}
 #sidenav a {
   text-decoration: none;
   color: #fff;
@@ -181,7 +173,7 @@ body::-webkit-scrollbar-thumb {
   appearance: none;
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #sidenav .hamburger {
     display: none;
   }
@@ -217,7 +209,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   transition: 0.4s;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #sidenav nav.mobile-nav {
     display: none;
   }
@@ -400,47 +392,118 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
   text-align: center;
 }
-#my-portfolio .card-wrap {
+#my-portfolio .cards-container {
+  margin: 30px;
+}
+#my-portfolio .cards-container .row {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-top: 100px;
 }
-#my-portfolio .card-wrap .card {
-  color: #000;
-  width: 15rem;
-  background-color: rgba(244, 244, 244, 0.5);
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s ease;
+#my-portfolio .cards-container .row .image {
+  flex: 1;
+  margin: 20px;
+  height: 300px;
+  max-width: 460px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
 }
-#my-portfolio .card-wrap .card:hover {
-  transform: translateY(-20px);
-  background-color: #f4f4f4;
+@media (max-width: 768px) {
+  #my-portfolio .cards-container .row .image {
+    flex: 100%;
+    max-width: 480px;
+  }
 }
-#my-portfolio .card-wrap .card img {
-  max-width: 100%;
-  height: 100% auto;
+#my-portfolio .cards-container .row .image img {
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-top-left-radius: 10px;
+  position: relative;
+  vertical-align: top;
+  transition: 0.6s;
+  transition-property: opacity;
 }
-#my-portfolio .card-wrap .card .card-info {
-  padding: 20px;
+#my-portfolio .cards-container .row .image:hover img {
+  opacity: 0.2;
 }
-#my-portfolio .card-wrap .card .card-info h2 {
-  margin-bottom: 10px;
-}
-#my-portfolio .card-wrap .card .card-info p {
-  margin-bottom: 20px;
-}
-#my-portfolio .card-wrap .card .card-btn {
+#my-portfolio .cards-container .row .image .img-details {
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   color: #fff;
-  display: inline-block;
+  position: absolute;
+}
+#my-portfolio .cards-container .row .image .img-details h2 {
+  font-size: 35px;
+  font-weight: 300;
+  margin-top: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.4s;
+  transition-property: transform;
+}
+#my-portfolio .cards-container .row .image .img-details h2 span {
+  font-weight: 500;
+}
+#my-portfolio .cards-container .row .image:hover .img-details h2 {
+  transform: translateY(-30px);
+}
+#my-portfolio .cards-container .row .image .img-details p {
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 30px 30px 0 30px;
+  transition: 0.4s;
+  transition-property: opacity, transform;
+}
+@media (max-width: 480px) {
+  #my-portfolio .cards-container .row .image .img-details p {
+    font-size: 16px;
+  }
+}
+#my-portfolio .cards-container .row .image:hover .img-details p {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+#my-portfolio .cards-container .row .image .view-project {
+  width: 100%;
+  padding: 15px;
+  bottom: -60px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.4s;
+  transition-property: bottom;
+}
+#my-portfolio .cards-container .row .image .view-project .view-link {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  background-color: purple;
+  text-transform: uppercase;
+}
+#my-portfolio .cards-container .row .image .view-project .view-icons i {
+  color: #000;
+  font-size: 20px;
+}
+#my-portfolio .cards-container .row .image .view-project .view-icons:not(:last-child) {
+  margin-right: 20px;
+}
+@media (max-width: 480px) {
+  #my-portfolio .cards-container .row .image .view-project .view-link, #my-portfolio .cards-container .row .image .view-project .view-icons i {
+    font-size: 18px;
+  }
+}
+#my-portfolio .cards-container .row .image:hover .view-project {
+  bottom: 0;
 }
 
 #code-examples {

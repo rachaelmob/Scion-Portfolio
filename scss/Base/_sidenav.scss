@@ -3,13 +3,6 @@
 //====================================//
 
 #sidenav {
-    background-color: #263628;
-    @media (max-width: $break--med){background-color: transparent;}
-
-    nav.fixed-menu {
-        // background-color: #161814;
-        background-color: #263628;
-    }
 
     a {
         text-decoration: none;
@@ -128,7 +121,7 @@
         background: none;
         appearance: none;
         position: relative;
-        @include mq(medium){display: none;}
+        @include mq(large){display: none;}
 
        &::after, &::before, .bar {
         content: "";
@@ -164,7 +157,7 @@
         flex-direction: column;
         align-items: center;
         transition: 0.4s;
-        @include mq(medium){display: none;}
+        @include mq(large){display: none;}
 
         &.is-active {
             right: 0;
