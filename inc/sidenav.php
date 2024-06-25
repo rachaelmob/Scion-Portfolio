@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head lang="en"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moyo's Scion Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5cbcf5da8c.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
-    <script src="js/jQuery.js"></script>
-</head>
-
-
-
-<body>
-
-<div class="body-container">
-
     <!-- ============================ SIDE BAR ============================ -->
     <div id="sidenav">
         <nav class="fixed-menu">
@@ -30,27 +9,27 @@
             
             <div class="menu-list">
                 <ul>
-                    <li><a href="./index.html#about-me">
+                    <li><a href="./index.php#about-me">
                         <i class="fa-solid fa-address-card"></i> 
                         <span class="nav-text">About Me</span> 
                     </a></li>
 
-                    <li><a href="./my-portfolio.html#my-portfolio">
+                    <li><a href="./my-portfolio.php#my-portfolio">
                         <i class="fa-brands fa-square-pied-piper"></i> 
                         <span class="nav-text">Portfolio</span> 
                     </a></li>
 
-                    <li><a href="./codeex.html#code-examples">
+                    <li><a href="./codeex.php#code-examples">
                         <i class="fa-solid fa-code"></i> 
                         <span class="nav-text">Code Examples</span>
                     </a></li>
 
-                    <li><a href="./scs.html#scs-scheme">
+                    <li><a href="./scs.php#scs-scheme">
                         <i class="fa-solid fa-graduation-cap"></i> 
                         <span class="nav-text">SCS Scheme</span>
                     </a></li>
 
-                    <li><a href="./my-portfolio.html#contact-me"><i class="fa-solid fa-pager"></i> 
+                    <li><a href="./my-portfolio.php#contact-me"><i class="fa-solid fa-pager"></i> 
                         <span class="nav-text">Contact me</span>
                     </a></li>
                 </ul>
@@ -108,48 +87,3 @@
 
         </nav>
     </div>
-
-
-    <!-- ============================ PAGE CONTENT ============================ -->
-    <div class="page-content">
-        
-
-        <!-- ============================ BANNER ============================ -->
-        <section id="banner">
-            <div class="banner-text">
-                <div class="banner-name">
-                    <h1>Moyo</h1>
-                    <!-- <h1>Banjoko</h1> -->
-                    <h1 class="typewrite"></h1>
-                </div>               
-                <div class="banner-btns">
-                    <button>Contact Me</button>
-                    <button>Hire Me</button>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- ============================ CODE EXAMPLES ============================ -->
-        <section id="code-examples">
-            <h1>CODE EXAMPLES</h1>
-        
-            <!-- <a href="index.html">
-                <button>
-                    <i class="fa-solid fa-arrow-left"></i> 
-                    Go Back</button>
-            </a> -->
-        
-            <h2>
-                COMING SOON
-            </h2>
-        </section>
-        
-
-    </div> <!-- content -->
-</div> <!--page wrap-->
-<script src="js/sidenav.js"></script>
-<script src="js/banner.js"></script>   
-<script src="js/contact-form.js"></script>
-</body>
-</html>
