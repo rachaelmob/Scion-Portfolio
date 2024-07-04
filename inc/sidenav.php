@@ -2,7 +2,7 @@
     <div id="sidenav">
         <nav class="fixed-menu">
             <div class="nav-title">
-                <a href="./index.html">
+                <a href="./index.php">
                 <h1>MB</h1>
                 </a>
             </div>

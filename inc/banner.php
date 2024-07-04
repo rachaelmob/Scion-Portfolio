@@ -7,8 +7,8 @@
                     <h1 class="typewrite"></h1>
                 </div>               
                 <div class="banner-btns">
-                    <button>Contact Me</button>
-                    <button>Hire Me</button>
+                    <button><a href="./my-portfolio.php#contact-me">Contact Me</a></button>
+                    <!-- <button>Hire Me</button> -->
                 </div>
             </div>
         </section>
