@@ -25,7 +25,7 @@
             <div class="cards-container">
                 <div class="row">
 
-                    <div class="image">
+                    <div class="card">
                         <img src="./img/netmatterspage.jpg" alt="">
                         <div class="img-details">
                             <h2>NetMatters <span>replica</span></h2>
@@ -33,7 +33,7 @@
                                 official Netmatters web homepage using HTML, CSS, Sass & JavaScript.
                             </p>
                             <div class="view-project">
-                                <a href="#" class="view-link">
+                                <a href="https://netmatters.moyosore-banjoko.netmatters-scs.co.uk/" class="view-link" target="_blank">
                                     View Project 
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -47,7 +47,30 @@
                         </div>
                     </div>
 
-                    <div class="image">
+                    <div class="card">
+                        <img src="./img/array.png" alt="random image generator" >
+                        <div class="img-details">
+                            <h2>Random Image <span>Generator</span></h2>
+                            <p> 
+                                A javascript array focused project that utilises 
+                                api, jquery, regex and javascript objects and arrays.
+                            </p>
+                            <div class="view-project">
+                                <a href="https://js-array.moyosore-banjoko.netmatters-scs.co.uk/" class="view-link" target="_blank">
+                                    View Project 
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                                <div class="view-icons">
+                                <i class="fa-brands fa-html5"></i>
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                    <i class="fa-brands fa-sass"></i>
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
                         <img src="./img/mountains-eberhard-grossgasteiger.jpg" alt="">
                         <div class="img-details">
                             <h2>Coming <span>Soon</span></h2>
@@ -66,10 +89,71 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <img src="./img/mountains-eberhard-grossgasteiger.jpg" alt="">
+                        <div class="img-details">
+                            <h2>Coming <span>Soon</span></h2>
+                            <p> 
+                                No project to see here, I am working on one.
+                                Stay at the edge of you seat for something new.
+                            </p>
+                            <div class="view-project">
+                                <a href="#" class="view-link">
+                                    View Project 
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                                <div class="view-icons">
+                                    <i class="fa-solid fa-spinner"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./img/mountains-eberhard-grossgasteiger.jpg" alt="">
+                        <div class="img-details">
+                            <h2>Coming <span>Soon</span></h2>
+                            <p> 
+                                No project to see here, I am working on one.
+                                Stay at the edge of you seat for something new.
+                            </p>
+                            <div class="view-project">
+                                <a href="#" class="view-link">
+                                    View Project 
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                                <div class="view-icons">
+                                    <i class="fa-solid fa-spinner"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./img/mountains-eberhard-grossgasteiger.jpg" alt="">
+                        <div class="img-details">
+                            <h2>Coming <span>Soon</span></h2>
+                            <p> 
+                                No project to see here, I am working on one.
+                                Stay at the edge of you seat for something new.
+                            </p>
+                            <div class="view-project">
+                                <a href="#" class="view-link">
+                                    View Project 
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                                <div class="view-icons">
+                                    <i class="fa-solid fa-spinner"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="image">
                         <img src="./img/mountains-eberhard-grossgasteiger.jpg" alt="">
                         <div class="img-details">
@@ -109,82 +193,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div> <!--cards container-->
 
 
-            <!-- <div class="card-wrap">
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Netmatters</h2>
-                        <p>
-                         A project assigned by netmatters to recreate their website 
-                         homepage using only HTML and CSS.
-                        </p>
-                        <a href="https://rachaelmob.github.io/Netmatters-Projects/" class="card-btn" target="_blank">
-                        Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/purple-sunset-mountain-rok-romih.jpg">
-                    <div class="card-info">
-                        <h2>Coming Soon...</h2>
-                        <p>I am still learning, new content will be 
-                        added soon. Please anticipate great things.
-                        </p>
-                        <a href="#" class="card-btn">Preview</a>
-                    </div>
-                </div>
-                
-            </div> -->
 
         </section>
 

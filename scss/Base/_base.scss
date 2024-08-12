@@ -35,7 +35,7 @@ body {
     #sidenav {
         top: 0;
         left: 0;
-        width: 15vw;
+        width: 20vw;
         z-index: 999;
         height: 100vh;
         position: fixed;
@@ -43,15 +43,15 @@ body {
         background-color: #161814;
         @media (max-width: $break--l){background-color: transparent;}
 
-        nav.fixed-menu {
+        div.fixed-menu {
             @media (max-width: $break--l){display: none;}
         }
     }
 
     //=== ALL PAGE CONTENT FOR STICKY SIDE NAV ===//
     .page-content {
-        width: 85vw;
-        margin-left: 15vw;
+        width: 80vw;
+        margin-left: 20vw;
         @media (max-width: $break--l){
             width:100vw;
             margin-left: 0;

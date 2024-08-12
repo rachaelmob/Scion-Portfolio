@@ -32,7 +32,13 @@
             <h2>
                 COMING SOON
             </h2>
+
+            <!-- Vertical Tabs : https://www.w3schools.com/howto/howto_js_vertical_tabs.asp -->
+            <!-- Tab Headers : https://www.w3schools.com/howto/howto_js_tab_header.asp -->
+
+
         </section>
+
         
 
     </div> <!-- content -->

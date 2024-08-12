@@ -21,11 +21,12 @@
             flex-wrap: wrap;
             justify-content: center;
 
-            .image {
+            .card {
                 flex: 1;
                 margin: 20px;
                 height: 300px;
-                max-width: 460px;
+                // max-width: 300px;
+                min-width: 300px;
                 overflow: hidden;
                 position: relative;
                 background-color: #000;
@@ -110,12 +111,18 @@
                     transition: 0.4s;
                     transition-property: bottom; 
 
+
                     .view-link {
                         color: #000;
                         font-size:0.8rem;
                         font-weight: 500;
                         text-decoration: none;
                         text-transform: uppercase;
+
+                        &:hover, &:hover i  { 
+                            text-decoration: underline;
+
+                        }
                     }
 
                     .view-icons i {
