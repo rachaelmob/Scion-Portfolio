@@ -1,3 +1,4 @@
+// SIDE NAVIGATION
 window.onload = function () {
 	window.addEventListener('scroll', function (e) {
 		if (window.scrollY > 100) {
@@ -14,4 +15,20 @@ window.onload = function () {
 		menu_btn.classList.toggle('is-active');
 		mobile_menu.classList.toggle('is-active');
 	});
+}
+
+// ACCORDIAN CODE EXAMPLES 
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }

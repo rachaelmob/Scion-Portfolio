@@ -15,14 +15,72 @@
         padding-bottom: 20px;
     }
 
-    h2 {
-        padding: 100px 0;
-        text-align: center;
-        align-self: center;
-    }
 
-    button {
-        @include transpbtn
+    //accordian display
+    .accordion {
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        padding: 18px;
+        width: 90%;
+        border: 1px solid #fff;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
     }
+      
+    .active, .accordion:hover {
+        background-color: rgba(255, 255, 255, 0.2);; 
+    }
+      
+    .panel {
+        width: 90%;
+        color: #000;
+        display: none;
+        margin: 0 auto;
+        // padding: 0 18px;
+        overflow: hidden;
+        background-color: white;
 
+        // Code display Tabs 
+        .mytabs{
+            // width: 90%;
+            // padding: 25px;
+            display: flex;
+            // max-width: 90%;
+            flex-wrap: wrap;
+            // margin: 0px auto;
+
+            & input[type="radio"] {
+                display: none;
+            }
+
+            & label {
+                padding: 25px;
+                background-color: #e2e2e2;
+            }
+
+        }
+
+        .mytabs .tab {
+            order: 1;
+            width: 100%;
+            display: none;
+            padding: 20px;
+            background-color: #c3c3c3;
+        }
+
+        .mytabs input[type="radio"]:checked + label + .tab {
+            display: block;
+        }
+
+        .mytabs label:hover{
+            background-color: rgba($color: #c3c3c3, $alpha: 0.8);
+        }
+
+        .mytabs input[type="radio"]:checked + label{
+            background-color: #c3c3c3;
+        }
+    }
 }

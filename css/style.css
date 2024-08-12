@@ -506,26 +506,55 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
   padding-bottom: 20px;
 }
-#code-examples h2 {
-  padding: 100px 0;
-  text-align: center;
-  align-self: center;
-}
-#code-examples button {
+#code-examples .accordion {
+  background-color: #000;
   color: #fff;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 10px 30px;
-  text-decoration: none;
-  border-radius: 30px;
-  border: 2px solid white;
-  background-color: transparent;
-  transition: 0.3s;
-}
-#code-examples button:hover {
   cursor: pointer;
-  transform: scale(1.2);
-  box-shadow: 0px 0px 5px #fff;
+  padding: 18px;
+  width: 90%;
+  border: 1px solid #fff;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+#code-examples .active, #code-examples .accordion:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#code-examples .panel {
+  width: 90%;
+  color: #000;
+  display: none;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white;
+}
+#code-examples .panel .mytabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+#code-examples .panel .mytabs input[type=radio] {
+  display: none;
+}
+#code-examples .panel .mytabs label {
+  padding: 25px;
+  background-color: #e2e2e2;
+}
+#code-examples .panel .mytabs .tab {
+  order: 1;
+  width: 100%;
+  display: none;
+  padding: 20px;
+  background-color: #c3c3c3;
+}
+#code-examples .panel .mytabs input[type=radio]:checked + label + .tab {
+  display: block;
+}
+#code-examples .panel .mytabs label:hover {
+  background-color: rgba(195, 195, 195, 0.8);
+}
+#code-examples .panel .mytabs input[type=radio]:checked + label {
+  background-color: #c3c3c3;
 }
 
 #scs-scheme {
