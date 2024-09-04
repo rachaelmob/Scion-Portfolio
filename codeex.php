@@ -103,18 +103,42 @@
             </div>
 
 
-
-
             <button class="accordion">Coming Soon</button>
             <div class="panel">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                aliquip ex ea commodo consequat.</p>
-            </div>
+                <div class="mytabs">
 
-            <!-- Vertical Tabs : https://www.w3schools.com/howto/howto_js_vertical_tabs.asp -->
-            <!-- Tab Headers : https://www.w3schools.com/howto/howto_js_tab_header.asp -->
+                    <input type="radio" name="mytabs3" id="html3" checked="checked">
+                    <label for="html3">HTML</label>
+                    <div class="tab">
+                        <h1>HTML</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <input type="radio" name="mytabs3" id="css3">
+                    <label for="css3">CSS</label>
+                    <div class="tab">
+                        <h1>CSS</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <input type="radio" name="mytabs3" id="javascript3">
+                    <label for="javascript3">JAVASCRIPT</label>
+                    <div class="tab">
+                        <h1>JAVASCRIPT</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                        aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                </div>
+            </div>
 
 
         </section>

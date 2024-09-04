@@ -65,10 +65,12 @@
 
         .mytabs .tab {
             order: 1;
+            color: #fff;
             width: 100%;
             display: none;
             padding: 20px;
-            background-color: #c3c3c3;
+            border: 1px solid #fff;
+            background-color: #000;
         }
 
         .mytabs input[type="radio"]:checked + label + .tab {
@@ -80,7 +82,9 @@
         }
 
         .mytabs input[type="radio"]:checked + label{
-            background-color: #c3c3c3;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: #000;
         }
     }
 }

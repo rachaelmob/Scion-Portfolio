@@ -3,8 +3,12 @@
 //====================================//
 
 #sidenav {
-    //see base for other styling
+    //see base for other sidenav styling
     padding: 20px;
+    background-color: #161814;
+    @include mq(large){border: 1px solid #fff;}
+
+    
     a {
         text-decoration: none;
         color: #fff;
@@ -88,7 +92,7 @@
                 }
 
                 &.github:hover{
-                    background: rgba($color: #62275C, $alpha: 1.0);
+                    background: rgba($color: #6e5494, $alpha: 1.0);
                 }
             }
         }

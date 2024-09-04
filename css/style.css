@@ -34,7 +34,6 @@ body::-webkit-scrollbar-thumb {
   z-index: 999;
   height: 100vh;
   position: fixed;
-  background-color: #161814;
 }
 @media (max-width: 992px) {
   .body-container #sidenav {
@@ -76,6 +75,12 @@ body::-webkit-scrollbar-thumb {
 
 #sidenav {
   padding: 20px;
+  background-color: #161814;
+}
+@media (min-width: 992px) {
+  #sidenav {
+    border: 1px solid #fff;
+  }
 }
 #sidenav a {
   text-decoration: none;
@@ -141,7 +146,7 @@ body::-webkit-scrollbar-thumb {
   background: #0e76a8;
 }
 #sidenav .socials a.github:hover {
-  background: #62275c;
+  background: #6e5494;
 }
 #sidenav .hamburger {
   top: 2%;
@@ -249,7 +254,7 @@ body::-webkit-scrollbar-thumb {
   width: 1px;
   height: 100%;
   margin-left: 0.5rem;
-  border: 5px solid #fff;
+  border: 2px solid #fff;
   animation: blink 1s infinite;
 }
 @keyframes blink {
@@ -391,7 +396,7 @@ body::-webkit-scrollbar-thumb {
 #my-portfolio .cards-container .row .card {
   flex: 1;
   margin: 20px;
-  height: 300px;
+  min-height: 300px;
   min-width: 300px;
   overflow: hidden;
   position: relative;
@@ -426,7 +431,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
 }
 #my-portfolio .cards-container .row .card .img-details h2 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 300;
   margin-top: 70px;
   text-align: center;
@@ -438,7 +443,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
 }
 #my-portfolio .cards-container .row .card:hover .img-details h2 {
-  transform: translateY(-30px);
+  transform: translateY(-20px);
 }
 #my-portfolio .cards-container .row .card .img-details p {
   opacity: 0;
@@ -456,7 +461,7 @@ body::-webkit-scrollbar-thumb {
 }
 #my-portfolio .cards-container .row .card:hover .img-details p {
   opacity: 1;
-  transform: translateY(-50px);
+  transform: translateY(-30px);
 }
 #my-portfolio .cards-container .row .card .view-project {
   width: 100%;
@@ -542,10 +547,12 @@ body::-webkit-scrollbar-thumb {
 }
 #code-examples .panel .mytabs .tab {
   order: 1;
+  color: #fff;
   width: 100%;
   display: none;
   padding: 20px;
-  background-color: #c3c3c3;
+  border: 1px solid #fff;
+  background-color: #000;
 }
 #code-examples .panel .mytabs input[type=radio]:checked + label + .tab {
   display: block;
@@ -554,7 +561,9 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(195, 195, 195, 0.8);
 }
 #code-examples .panel .mytabs input[type=radio]:checked + label {
-  background-color: #c3c3c3;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #000;
 }
 
 #scs-scheme {
@@ -613,39 +622,88 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 50px;
   padding-left: 0;
 }
-#contact-me .hide-hint {
-  display: none;
-}
-#contact-me h1 {
-  font-size: 55px;
-  opacity: 0.8;
-  text-align: center;
-  padding-bottom: 20px;
+#contact-me .error-message {
+  margin-top: 5px;
+  color: #FBCEB1;
+  font-size: 0.875em;
+  padding-bottom: 5px;
 }
 #contact-me .form-container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  background-color: #aaa;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 992px) {
+  #contact-me .form-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#contact-me .form-container .contact-info {
+  padding: 2rem;
+  color: #161810;
+}
+#contact-me .form-container .contact-info .info-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+#contact-me .form-container .contact-info .info {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 10px;
 }
-#contact-me .form-container form {
-  width: 90%;
-  max-width: 600px;
+#contact-me .form-container .contact-info .info i {
+  color: #222;
+  margin-right: 10px;
 }
-#contact-me .form-container form .input-group {
+#contact-me .form-container .contact-info .info p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+#contact-me .form-container .contact-info .socials a {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  color: #fff;
+  display: block;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+#contact-me .form-container .contact-info .socials a.linked:hover {
+  background: #0e76a8;
+}
+#contact-me .form-container .contact-info .socials a.github:hover {
+  background: #6e5494;
+}
+#contact-me .form-container form#contactForm {
+  padding: 2rem;
+  background-color: #161810;
+}
+#contact-me .form-container form#contactForm .form-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+#contact-me .form-container form#contactForm .input-group {
   margin-bottom: 30px;
   position: relative;
 }
-#contact-me .form-container form input, #contact-me .form-container form textarea {
+#contact-me .form-container form#contactForm input, #contact-me .form-container form#contactForm textarea {
   outline: 0;
   width: 100%;
   color: #fff;
   padding: 10px;
   font-size: 15px;
-  border-radius: 10px;
+  letter-spacing: 1px;
+  border-radius: 20px;
   border: 1px solid #fff;
   background: transparent;
 }
-#contact-me .form-container form label {
+#contact-me .form-container form#contactForm label {
   cursor: text;
   height: 100%;
   padding: 10px;
@@ -654,22 +712,19 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   transition: 0.2s;
 }
-#contact-me .form-container form input:focus ~ label,
-#contact-me .form-container form input:valid ~ label,
-#contact-me .form-container form textarea:focus ~ label,
-#contact-me .form-container form textarea:valid ~ label {
+#contact-me .form-container form#contactForm input:focus ~ label,
+#contact-me .form-container form#contactForm input:valid ~ label,
+#contact-me .form-container form#contactForm textarea:focus ~ label,
+#contact-me .form-container form#contactForm textarea:valid ~ label {
   top: -35px;
   font-size: 14px;
 }
-#contact-me .form-container form input:hover, #contact-me .form-container form input:focus,
-#contact-me .form-container form textarea:hover, #contact-me .form-container form textarea:focus,
-#contact-me .form-container form button:hover, #contact-me .form-container form button:focus {
+#contact-me .form-container form#contactForm input:hover, #contact-me .form-container form#contactForm input:focus,
+#contact-me .form-container form#contactForm textarea:hover, #contact-me .form-container form#contactForm textarea:focus,
+#contact-me .form-container form#contactForm button:hover, #contact-me .form-container form#contactForm button:focus {
   box-shadow: 0px 0px 5px #fff;
 }
-#contact-me .form-container form .error-hint {
-  color: rgb(255, 0, 89);
-}
-#contact-me .form-container form button {
+#contact-me .form-container form#contactForm button {
   width: 100%;
   color: #fff;
   outline: none;
@@ -678,11 +733,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 1px solid #fff;
   background: transparent;
-}
-#contact-me .thankyou {
-  font-size: 50px;
-  text-align: center;
-  padding-top: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

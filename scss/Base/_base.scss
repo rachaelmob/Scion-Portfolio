@@ -39,8 +39,7 @@ body {
         z-index: 999;
         height: 100vh;
         position: fixed;
-        // background-color: #263628;
-        background-color: #161814;
+
         @media (max-width: $break--l){background-color: transparent;}
 
         div.fixed-menu {
