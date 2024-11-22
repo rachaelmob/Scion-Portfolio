@@ -30,7 +30,7 @@
         </div>
 
 
-        <form action="index.html" method="post" id="contactForm">
+        <form action="/inc/mailer.php" method="post" id="contactForm">
             <h2 class="form-title">Contact Me</h2>
             <div class="input-group">
                 <input type="text" required id="firstname" name="user_firstname"> 

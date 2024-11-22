@@ -17,7 +17,7 @@ $password = $dbconfig["DB_PASSWORD"];
 try {
 
     $dpdo = new PDO("mysql:host=$host;dbname=$dbname", $dbuser, $password);
-    echo "Connected";
+    // echo "Connected";
 
 } catch(PDOException $e) {
     // Change error code ---

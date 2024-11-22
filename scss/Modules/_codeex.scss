@@ -39,18 +39,14 @@
         color: #000;
         display: none;
         margin: 0 auto;
-        // padding: 0 18px;
         overflow: hidden;
         background-color: white;
 
         // Code display Tabs 
         .mytabs{
-            // width: 90%;
-            // padding: 25px;
             display: flex;
-            // max-width: 90%;
             flex-wrap: wrap;
-            // margin: 0px auto;
+
 
             & input[type="radio"] {
                 display: none;
@@ -69,6 +65,7 @@
             width: 100%;
             display: none;
             padding: 20px;
+            overflow: scroll;
             border: 1px solid #fff;
             background-color: #000;
         }
@@ -86,5 +83,9 @@
             border: 1px solid #fff;
             background-color: #000;
         }
+    }
+
+    .code-wrap{
+        text-align: left;
     }
 }

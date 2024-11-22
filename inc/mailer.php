@@ -2,7 +2,8 @@
 // Start with PHPMailer class
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require_once './vendor/autoload.php'; // Use Composer's autoload
+require_once '../vendor/autoload.php'; // Use Composer's autoload
+
 
 // Initialize variables
 $errors = [];
@@ -53,6 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $dpdo = null;
             $statement = null;
 
+            header("Location: ../my-portfolio.php");
+
             // Proceed to send the email
             $mail = new PHPMailer(true); // Pass `true` to throw exceptions on error
             $mail->isSMTP();
@@ -64,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Port = 587;
 
             // Set sender and recipient
-            $mail->setFrom('confirmation@yourdomain.com', 'Your Hotel');
+            $mail->setFrom($email, $firstName);
             $mail->addAddress('receiver@gmail.com', 'Receiver Name');
 
             // Email subject and body
@@ -74,10 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->AltBody = 'Hi there, we are happy to confirm your booking. Please check the document in the attachment.';
 
             // Attach a file
-            $attachmentPath = './confirmations/yourbooking.pdf';
-            if (file_exists($attachmentPath)) {
-                $mail->addAttachment($attachmentPath, 'yourbooking.pdf');
-            }
+            // $attachmentPath = './confirmations/yourbooking.pdf';
+            // if (file_exists($attachmentPath)) {
+            //     $mail->addAttachment($attachmentPath, 'yourbooking.pdf');
+            // }
 
             // Send the email
             if ($mail->send()) {
@@ -93,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Redirect if form is accessed directly
-    header("Location: ../index.php");
+    header("Location: ../my-portfolio.php");
     exit();
 }
 
